@@ -24,7 +24,7 @@ export const sponsorConfig: SponsorConfig = {
 			icon: "fa7-brands:alipay",
 			// 收款码图片路径（需要放在 public 目录下）
 			// qrCode: "/assets/images/sponsor/alipay.png",
-			qrCode: "https://quickchart.io/qr?text=https%3A%2F%2Fqr.alipay.com%2Ffkx15943aeop3lxzmgjp21b&format=svg",
+			qrCode: "/assets/images/sponsor/alipay.svg",
 			link: "",
 			description: "使用 支付宝 扫码赞助",
 			enabled: true,
@@ -32,7 +32,8 @@ export const sponsorConfig: SponsorConfig = {
 		{
 			name: "微信",
 			icon: "fa7-brands:weixin",
-			qrCode: "https://quickchart.io/qr?text=wxp%3A%2F%2Ff2f0aBQUj38I9p01cZWOOSrtZnYjqJmR8LHEEXN03P-2pMw&format=svg",
+			// qrCode: "/assets/images/sponsor/wechat.png",
+			qrCode: "/assets/images/sponsor/wechat.svg",
 			link: "",
 			description: "使用 微信 扫码赞助",
 			enabled: true,
