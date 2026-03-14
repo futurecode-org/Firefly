@@ -1,0 +1,183 @@
+---
+title: "Web Application Development Practical1: HTML"
+published: 2026-03-11
+# updated: 
+description: HTML has been updated multiple times over the years the Web has existed. Originally, HTML focused on creating the appearance of web pages, but modern HTML focuses more on dividing up parts of the page logically. CSS is used to create the appearance of the page.
+image: ./92334011_p0.jpg
+tags: [Web, HTML]
+category: Web Application Development
+draft: false
+pinned: false
+# slug: 
+lang: en
+author: 🐦‍🔥不死鸟Anka
+comment: true
+# licenseName: 
+# licenseUrl: 
+# sourceLink: 
+---
+
+# Practical Session 1: HTML
+
+In this session you will learn the HTML syntax which is used for representing web pages.
+
+HTML has been updated multiple times over the years the Web has existed. Originally, HTML focused on creating the appearance of web pages, but modern HTML focuses more on dividing up parts of the page logically. CSS is used to create the appearance of the page. You will learn some CSS next week.
+
+1. Open a text editor (such as Notepad++ - not Word or any other word processor) and copy and paste the following into it:
+
+```html
+<html>
+    <head>
+        <title>My first web page</title>
+    </head>
+    <body>
+        <p>Hello World!</p>
+    </body>
+</html> 
+```
+
+2. Save the file on your H: drive with the file name `intro.html`. Make sure that the text editor does not add an extra extension to the file name (such as `intro.html.txt`)
+
+3. Open *Google Chrome*, and open your H drive in the File Browser. Drag and drop your HTML file from the File Browser into the Google Chrome window to open it. You should see the message “Hello World!”. (Once you have done this once, you can use the Reload button in Chrome to update the display of your file when you change it, in the same way you could a page from a server.)
+
+4. With the Chrome window selected, press `Ctrl+Shift+I` to open the Web Developer Tools. *Click* on the *Elements* tab at the top of the developer tools. You should see the contents of the HTML file laid out and divided into blocks.
+
+Here is how HTML works:
+
+- An HTML file is made up of **elements**.
+- Most elements are represented by text surrounded by tags.
+- A tag is a piece of text that begins with `<` and ends with `>` . Note that in, for example, `<p>Hello World</p>`, `<p>` and  `</p>` are **tags**, and the whole thing is the **element**. (The distinction between the two is a common question on web-based job interviews!)
+- A tag where the text starts with `/` marks the end of an element. So `<p>` means the start of a element with type "P" , and `</p>` means the end of the element.
+- A `p` element is short for *paragraph*. It represents a block of text to be shown on the page.
+
+5. Add another `p` element after `Hello World` that reads, `This is HTML!`. It should start after the  `</p>` tag and but before the `</body>` tag. Reload this into Chrome and you should see the text in two blocks.
+
+6. Try adding new lines, spaces, or any other text between the two `p` elements (that is, between the `</p>` end tag of the first `p` element and the `<p>` start tag of the second)
+
+- You will notice that this makes no difference to how the text appears on the web page. Web Browsers pay attention only to your HTML tags when they lay out a page, not to how the HTML is arranged in the text file.
+
+7. If you want to include an actual `<` or `>` symbol in your text, you must write `&lt;` or `&gt;` This is called an **entity**. The browser will replace this with the correct symbol and will not confuse it for part of a tag. Modify the text so that it reads `Hello > World!` when shown in the browser.
+
+8. Another type of element is the `b` (bold) element. It indicates text should be highlighted. Modify the file to make the word `World!` bold by placing it in a `b` element.
+
+- When you place elements inside other elements, you must make sure that they properly fit inside each other. If you place a `b` inside a `p` , the `b` must be completely inside the `p`. So, make sure to place the `</b>` end tag of the B before the `</p>` that ends the `p`.
+
+9. View this and notice how it looks.
+
+There are two types of layout elements in HTML: **block** elements, and **span** elements.
+
+- `p` is a **block** element. It forces the browser to put the text into a new block, which is why the content of your two P elements appears broken up, even if they are in the same line in your HTML.
+- `b` is a **span** element. It does not force the browser to create a new block. The bolded text appears in the existing block. This means that it can be wrapped around multiple lines or otherwise made to fit the flow of the text.
+
+There are also two types of elements in HTML that are not used for layout: **logical** and **metadata** elements.
+
+- A **logical** element is one that gives information to the browser but does not directly affect the layout of the page. The `HTML`, `HEAD` and `BODY` elements are logical elements.
+- HTML requires that the whole page is inside an HTML element. The HEAD and BODY elements are used to divide the page into the section that sets up or provides information on the other content (the head), and the actual content (the body).
+- A **metadata** tag provides general information about the page, which may be used by the browser as well as by search engines and other programs that may interact with the web page.
+- `TITLE` is a metadata tag. It gives the title of your page. Note that the text in the `TITLE` tag does not appear on the page, but it is used by most browsers as the title of the window and/or tab that the page is displayed in. It is also used by Search Engines as the text to click on to go to the page.
+
+Here are some more span elements that apply basic changes to text:
+
+- The `u` element makes text underlined, or otherwise highlighted (underlined text is difficult for some users to read, so some browsers offer the option to replace the underline)
+- The `i` element puts text in italics.
+
+10. Add another P element to the page, and use these span elements to make the following text appear on the page:<br>One, *two*, **three**, <u>f</u>our, **I want *to* know** more.<br>Try to use as few elements as possible, but also make sure that they nest properly. If you nest your tags wrongly, Chrome will have to fix them before displaying your page, and the view of your source code in the developer tools tab will be different from that in your file. Although Chrome is good at fixing these errors, leaving them in your pages and trusting the browser to fix them is extremely unprofessional.
+
+HTML elements can have **attributes**. Attributes are placed inside the **start tag** of an element. They are separated from the element type by spaces and are listed as key and value pairs.
+
+11. Add the following within the body of your HTML page:<br>`<a href="[http://brookes.ac.uk/](http://brookes.ac.uk/)">Click me!</a>`<br>View your page in Chrome and you should be able to click on the text to be taken to the Brookes home page.
+
+The `a` element is a **span** element that creates a link (it stands for *anchor*, a term from the original Hypertext design).
+
+The `a` element needs to have a **href attribute** (short for "hypertext reference") which gives the URL of the page to link to.
+
+Attributes are always written inside the start tag in the syntax above, with the key of the attribute, an equals sign, then the value in quotes. Note that in modern HTML, the value should always be in quotes, even if it is a number.
+
+12. Add another `a` element to the page which links to one of your social media profiles. If you do not use any social media, create the link to the home page of your previous school.
+
+13. We will now add an image to your page. Download a suitable image from the Internet and place the image file in the same directory as your HTML file.
+
+14. Find the pixel dimensions of the image. You can do this in Windows 10 by clicking on the image in the File Browser, and when it appears in Photos, right clicking and choosing *File Information*.
+
+15. Add the following to your HTML file between the final `p` element and the end of the`BODY` element:<br>`<img src="moose.jpg" height="182" width="277">`<br>But replace `moose.jpg` with the name of your image file and the `height` and `width` values with the appropriate values for your image.
+
+The `img` element has two properties you have not seen before.
+
+- Unlike the other elements you have used, an `img` element cannot contain text or other tags. There is thus no point using a **start tag** and **end tag** to surround its contents, since it cannot have any contents. Instead, `img` is an an **empty tag** which does not require an end tag. (In some versions of HTML, a `/` is placed at the **end** of the tag to make clear that it is an empty tag rather than a start tag. But this is not needed in the current HTML standard.)
+- An `img` is a **block** element which means it reserves a space on the page. Unlike text, an image cannot be wrapped or rearranged (the technical term is *reflowed*) to fit a space; it always has to fit in a rectangle or square.
+
+It is good practice to always specify the `width` and `height` of images because this allows the browser to immediately know how big the box for the image has to be, rather than having to wait for the image to load. Your page will become visible to the viewer more quickly if you use these attributes.
+
+16. Try moving the `img` element into, out of, and between your `p` elements to see how HTML behaves when blocks are nested.
+
+17. You can make an image into a link by placing the image element inside the anchor element. Make the image into your file into a link to a site suitable for the image.
+
+HTML can specify a number of other standard layouts. We will look at one of these: tables. In older versions of HTML, tables were used to lay out arbitrary pages, but they should not be used this way any more in modern HTML; you should use table tags only if your content is actually a table.
+
+18. Copy and paste the following code into your HTML file:
+
+```html
+<table>
+    <tr>
+        <th>Name</th><th>Age</th>
+    </tr>
+    <tr>
+        <td>Bob</td><td>25</td>
+    </tr>
+    <tr>
+        <td>Jane</td><td>30</td>
+    </tr>
+</table>
+```
+
+19. View the file in Chrome. Note that the table will look extremely simple at the moment. We will learn to improve this later.
+
+A table is made from a number of elements placed inside each other. All of them are block elements.
+
+- The `table` must contain the whole table.
+- Each row of the table must be within a `tr` (Table Row) element.
+- Each cell of the table must be within a `td` (Table Data) element unless it is a header in which case it can be within a `th` (Table Header) element.
+
+You can use span tags, and even other block tags, inside td s. You should not put text directly into `table` or `tr` elements.
+
+20. Create the following table in HTML. Your table should have the same text style properties, but the table itself may not look exactly the same.
+
+| Breed      | Sound        |
+| ---------- | ------------ |
+| Poodle     | Yap          |
+| Basset     | Arf          |
+| Husky      | *Wowowow...* |
+| Labrador   | Woof         |
+| St Bernard | **WOOF**     |
+| Rottweiler | Grrr...      |
+
+21. Create the following table in HTML by using block tags and entities inside the table cells. Again, your table may not look exactly the same because of differing standards for how a table is laid out by default across browsers. You will learn to specify the layout more precisely later.
+
+| Type      | Example | Meaning                                                                                                                                                                                                                                                                                                                            |
+| --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Start Tag | `<p>`   | Marks the beginning of an element that has content.                                                                                                                                                                                                                                                                                |
+| End Tag   | `</p>`  | Marks the end of an element that has content.                                                                                                                                                                                                                                                                                      |
+| Empty Tag | `<p>`   | Marks an element that has no content. In HTML5 the syntax is the same as a start tag. In XHTML, this would be written as `<p/>` instead. You can use this syntax in HTML5 too if you prefer to make it obvious that this is an empty tag. This is used for elements such as `img` which are not allowed to contain other elements. |
+
+Interactive elements in web pages are created in HTML using *forms*. Even if they do not behave as actual forms that you fill in and submit, the HTML standard used to create them is still referred to as a form.
+
+You create a form using a `form` element. A `form` element is a block element. A `form` element can contain `input` elements which create the interactive content. `input` elements are empty elements. An `input` element must have a `type` attribute and an `id` attribute. The `id` attribute must contain a unique name for the input that will identify it when it is used in a program. The `type` attribute specifies what type of input it is. To create a text input, the `type` attribute should be `text`.
+
+22. Create two text fields on your page with the labels “first name” and “last name”. The text fields should be on different lines. They do not have to be right next to each other or to line up horizontally. You will not be able to make the page respond to the contents of the fields yet.
+
+23. For the remainder of practical time, visit [https://www.w3schools.com/tags/default.asp](https://www.w3schools.com/tags/default.asp) and learn more about the other tags available in HTML and experiment with them.
+
+---
+
+> [!CHECK] Reference Answer
+> See the content in the box below.
+> 
+> Also, you can download the source code <a href="/assets/obu/level5/semester2/wad/week1/intro.html" download="intro.html">here</a>.
+
+<iframe
+  id="reference-answer"
+  title="Reference Answer"
+  height="500"
+  src="/assets/obu/level5/semester2/wad/week1/intro.html"
+  style="border: 1px solid black; width: 100%;">
+</iframe>
