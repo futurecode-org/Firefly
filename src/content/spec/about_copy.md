@@ -1,6 +1,6 @@
 # 关于我 / About Me
 
-你好！我是 **Anka**。
+你好！我是 **夏叶** ，一个在数字世界中默默无闻的一片叶子。
 
 ## 🛠️ 关于本站
 
@@ -11,7 +11,7 @@
 
 **🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
 
-**🏠我的博客： [https://blog.anka2.top](https://blog.anka2.top/)**
+**🏠我的博客： [https://blog.cuteleaf.cn](https://blog.cuteleaf.cn/)**
 
 **📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
 
@@ -23,4 +23,16 @@
 
 ::github{repo="saicaca/fuwari"}
 
+
+## 📫 联系方式
+
+如果你想和我交流技术问题，分享有趣的想法，或者只是想打个招呼，欢迎通过以下方式联系我：
+
+- 💻 **GitHub**: [CuteLeaf](https://github.com/CuteLeaf)
+- ✉️ **Email**: [xiaye@msn.com](mailto:xiaye@msn.com)
+- 🐧 **QQ交流群：[1087127207](https://qm.qq.com/q/ZGsFa8qX2G)**
+
+---
+
 *感谢你的来访！希望在这里能找到对你有用的内容！*
+
