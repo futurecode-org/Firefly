@@ -172,8 +172,128 @@ You create a form using a `form` element. A `form` element is a block element. A
 > [!CHECK] Reference Answer
 > See the content in the box below.
 > 
-> Also, you can download the source code <a href="/assets/obu/level5/semester2/wad/week1/intro.html" download="intro.html">here</a>.
+> Also, you can download the source code <a href="/assets/obu/level5/semester2/wad/week1/intro.html" download>here</a>.
 
+Source code:
+```html
+// intro.html
+<html>
+    <head>
+        <title>My first web page</title>
+    </head>
+    <body>
+        <p>Hello World!</p> In this session, we will learn how to create a simple web page using HTML. HTML stands for HyperText Markup Language and is the standard language for creating web pages. It uses tags to structure content on the web page. For example, the tag is used to define a paragraph of text. Let's see how it works in practice.
+        <p>Hello <b>World!</b></p>
+        <p>This is HTML!</p>
+        &lt; or &gt;
+        <p>One, <i>two</i>, <b>three</b>, <u>f</u>our, <b>I want <i>to</i> know</b> more.</p>
+        <a href="https://www.anka2.top" target="_blank">Click me!</a>
+        <!-- <img src="moose.jpg" height="182" width="277"> -->
+        <p><a href="https://img.chuyel.top" target="_blank"><img src="https://img.chuyel.top/api" height="10%"/></a></p>
+        <table>
+            <caption>My first table</caption>
+            <tr>
+                <th>Name</th><th>Age</th>
+            </tr>
+            <tr>
+                <td>Bob</td><td>25</td>
+            </tr>
+            <tr>
+                <td>Jane</td><td>30</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <caption>Dog breeds and their sounds</caption>
+            <tr>
+                <th>Breed</th><th>Sound</th>
+            </tr>
+            <tr>
+                <td>Poodle</td><td>Yap</td>
+            </tr>
+            <tr>
+                <td>Basset</td><td>Arf</td>
+            </tr>
+            <tr>
+                <td>Husky</td><td><i>Wowowow...</i></td>
+            </tr>
+            <tr>
+                <td>Labrador</td><td>Woof</td>
+            </tr>
+            <tr>
+                <td>St Bernard</td><td><b>WOOF</b></td>
+            </tr>
+            <tr>
+                <td>Rottweiler</td><td>Grrr...</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th>Type</th><th>Example</th><th>Meaning</th>
+            </tr>
+            <tr>
+                <td>Start Tag</td><td>&lt;p&gt;</td><td>Marks the beginning of an element that has content.</td>
+            </tr>
+            <tr>
+                <td>End Tag</td><td>&lt;/p&gt;</td><td>Marks the end of an element that has content.</td>
+            </tr>
+            <tr>
+                <td>Empty Tag</td><td>&lt;p&gt;</td><td>Marks an element that has no content. In HTML5 the syntax is the same as a start tag. In XHTML, this would be written as &lt;p/&gt; instead. You can use this syntax in HTML5 too if you prefer to make it obvious that this is an empty tag. This is used for elements such as <b>img</b> which are not allowed to contain other elements.</td>
+            </tr>
+        </table>
+        <style>
+            caption {
+                caption-side: bottom;
+                padding: 10px;
+                font-weight: bold;
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 10px;
+            }
+        </style>
+        <br>
+        <form action="" method="get" class="form-example">
+        <div class="form-example">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+            <label for="email">Enter your email: </label>
+            <input type="email" name="email" id="email" required />
+        </div>
+        <div class="form-example">
+            <input type="submit" value="Subscribe!" />
+        </div>
+        </form>
+        <style>
+            form.form-example {
+            display: table;
+            }
+
+            div.form-example {
+            display: table-row;
+            }
+
+            label,
+            input {
+            display: table-cell;
+            margin-bottom: 10px;
+            }
+
+            label {
+            padding-right: 10px;
+            }
+        </style>
+    </body>
+</html>
+```
+
+Preview:
 <iframe
   id="reference-answer"
   title="Reference Answer"
