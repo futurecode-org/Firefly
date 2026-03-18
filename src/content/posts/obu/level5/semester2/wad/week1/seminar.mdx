@@ -81,11 +81,11 @@ Here are some more span elements that apply basic changes to text:
 - The `u` element makes text underlined, or otherwise highlighted (underlined text is difficult for some users to read, so some browsers offer the option to replace the underline)
 - The `i` element puts text in italics.
 
-10. Add another P element to the page, and use these span elements to make the following text appear on the page:<br>One, *two*, **three**, <u>f</u>our, **I want *to* know** more.<br>Try to use as few elements as possible, but also make sure that they nest properly. If you nest your tags wrongly, Chrome will have to fix them before displaying your page, and the view of your source code in the developer tools tab will be different from that in your file. Although Chrome is good at fixing these errors, leaving them in your pages and trusting the browser to fix them is extremely unprofessional.
+10. Add another P element to the page, and use these span elements to make the following text appear on the page:<br/>One, *two*, **three**, <u>f</u>our, **I want *to* know** more.<br/>Try to use as few elements as possible, but also make sure that they nest properly. If you nest your tags wrongly, Chrome will have to fix them before displaying your page, and the view of your source code in the developer tools tab will be different from that in your file. Although Chrome is good at fixing these errors, leaving them in your pages and trusting the browser to fix them is extremely unprofessional.
 
 HTML elements can have **attributes**. Attributes are placed inside the **start tag** of an element. They are separated from the element type by spaces and are listed as key and value pairs.
 
-11. Add the following within the body of your HTML page:<br>`<a href="[http://brookes.ac.uk/](http://brookes.ac.uk/)">Click me!</a>`<br>View your page in Chrome and you should be able to click on the text to be taken to the Brookes home page.
+11. Add the following within the body of your HTML page:<br/>`<a href="[http://brookes.ac.uk/](http://brookes.ac.uk/)">Click me!</a>`<br/>View your page in Chrome and you should be able to click on the text to be taken to the Brookes home page.
 
 The `a` element is a **span** element that creates a link (it stands for *anchor*, a term from the original Hypertext design).
 
@@ -99,7 +99,7 @@ Attributes are always written inside the start tag in the syntax above, with the
 
 14. Find the pixel dimensions of the image. You can do this in Windows 10 by clicking on the image in the File Browser, and when it appears in Photos, right clicking and choosing *File Information*.
 
-15. Add the following to your HTML file between the final `p` element and the end of the`BODY` element:<br>`<img src="moose.jpg" height="182" width="277">`<br>But replace `moose.jpg` with the name of your image file and the `height` and `width` values with the appropriate values for your image.
+15. Add the following to your HTML file between the final `p` element and the end of the`BODY` element:<br/>`<img src="moose.jpg" height="182" width="277">`<br/>But replace `moose.jpg` with the name of your image file and the `height` and `width` values with the appropriate values for your image.
 
 The `img` element has two properties you have not seen before.
 
@@ -172,7 +172,35 @@ You create a form using a `form` element. A `form` element is a block element. A
 > [!CHECK] Reference Answer
 > See the content in the box below.
 > 
-> Also, you can download the source code <a href="/assets/obu/level5/semester2/wad/week1/intro.html" download>here</a>.
+> Also, you can download the source code <a id="download-intro" href="#" class="inline-link">here</a>.
+
+<script is:inline>
+{`
+  async function downloadIntro(event) {
+    event.preventDefault();
+    try {
+      const resp = await fetch("/assets/obu/level5/semester2/wad/week1/intro.html");
+      if (!resp.ok) throw new Error("请求失败：" + resp.status);
+
+      const blob = await resp.blob();
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "intro.html";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("下载失败", err);
+      alert("下载失败，请查看控制台");
+    }
+  }
+
+  document.getElementById("download-intro")?.addEventListener("click", downloadIntro);
+`}
+</script>
 
 Source code:
 ```html
@@ -202,7 +230,7 @@ Source code:
                 <td>Jane</td><td>30</td>
             </tr>
         </table>
-        <br>
+        <br/>
         <table>
             <caption>Dog breeds and their sounds</caption>
             <tr>
@@ -227,7 +255,7 @@ Source code:
                 <td>Rottweiler</td><td>Grrr...</td>
             </tr>
         </table>
-        <br>
+        <br/>
         <table>
             <tr>
                 <th>Type</th><th>Example</th><th>Meaning</th>
@@ -256,7 +284,7 @@ Source code:
                 padding: 10px;
             }
         </style>
-        <br>
+        <br/>
         <form action="" method="get" class="form-example">
         <div class="form-example">
             <label for="name">Enter your name: </label>
