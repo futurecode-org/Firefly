@@ -148,6 +148,7 @@ The last **non zero** remainder is 8 so the GCD is = <span style="color: blue">8
 
 - Co-prime numbers are two or more numbers whose greatest common divisor (GCD) is **1**.
 - For example, **7** and **8** are co-prime numbers because their GCD is **1**.
+
 <span style="color: red">Properties of Co-Prime Numbers:</span>
 - 1 is co-prime with every other number.
 - Prime numbers are co-prime with each other.
@@ -233,10 +234,11 @@ Thus, it is evident that <span style="color: blue">7∣(3×14 + 2×63)</span>.
 ---
 
 - Suppose the current time is 10 o'clock. If I want to meet you in 6 hours, what time will it be?
+
 <span style="color: red">Calculation:</span>
 - Current time = **10**
 - Time after **6** hours = **10 + 6 = 16**
-- However, on a **12-hour clock**, we calculate **16 mod  12**:
+- However, on a **12-hour clock**, we calculate **16 mod 12**:
     - Divide **16 by 12**, which equals **1 remainder 4**, or simply, **16 modulo 12 equals 4**.
     - Therefore, we will meet at **4 o'clock**.
 - This example shows how, after reaching the maximum of 12, the hours **wrap around to the beginning**, demonstrating the essence of modular arithmetic.
@@ -244,11 +246,11 @@ Thus, it is evident that <span style="color: blue">7∣(3×14 + 2×63)</span>.
 ### Quiz Modular Arithmetic
 
 Find the result of the following modulo arithmetic operations:
-- `18 mod 12 		= 6`
-- `24 mod 12  	    = 0`
-- `32 mod 12		= 8`
-- `4 mod 12		= 4`
-- `8 mod 12		= 8`
+- `18 mod 12    = 6`
+- `24 mod 12    = 0`
+- `32 mod 12    = 8`
+- `4 mod 12     = 4`
+- `8 mod 12     = 8`
 
 ### Congruence
 
@@ -258,33 +260,33 @@ Find the result of the following modulo arithmetic operations:
 
 ### Properties of Congruence
 
-Congruence in modular arithmetic is a relationship between integers indicating that they leave the same remainder when divided by a modulus 𝑛. If <span style="color: blue">𝑎</span> and <span style="color: blue">𝑏</span> are integers and **𝑛>0**, **𝑎 ≡ 𝑏 mod  𝑛** means 𝑛 <span style="color: blue">divides</span> (𝑎−𝑏) <span style="color: blue">without a remainder</span>.
+Congruence in modular arithmetic is a relationship between integers indicating that they leave the same remainder when divided by a modulus 𝑛. If <span style="color: blue">𝑎</span> and <span style="color: blue">𝑏</span> are integers and **𝑛>0**, **𝑎 ≡ 𝑏 mod 𝑛** means 𝑛 <span style="color: blue">divides</span> (𝑎−𝑏) <span style="color: blue">without a remainder</span>.
 
 <span style="color: red">Example 1:</span>
 
-**16 ≡ 4 mod  12** indicates that 12 divides **16−4=12** <span style="color: blue">evenly</span>.
+**16 ≡ 4 mod 12** indicates that 12 divides **16−4=12** <span style="color: blue">evenly</span>.
 
 <span style="color: blue">Reflexivity Property:</span>
 
-**𝑎 ≡ 𝑎 mod  𝑛** for any integer **𝑎**. This is because the difference **𝑎−𝑎=0**, and any number divides zero.
+**𝑎 ≡ 𝑎 mod 𝑛** for any integer **𝑎**. This is because the difference **𝑎−𝑎=0**, and any number divides zero.
 
 <span style="color: red">Example 2:</span>
 
-Consider **𝑎=15** and **𝑛=12**, thus **15 ≡ 3 mod  12** since the remainder when **15** is divided by **12** is **3**.
+Consider **𝑎=15** and **𝑛=12**, thus **15 ≡ 3 mod 12** since the remainder when **15** is divided by **12** is **3**.
 
 ---
 
 <span style="color: blue">Symmetry Property:</span>
 
-If **𝑎 ≡ 𝑏 mod  𝑛**, then **𝑏 ≡ 𝑎 mod  𝑛**. This follows because if 𝑛 divides (𝑎−𝑏), it also divides (𝑏−𝑎)(as 𝑏−𝑎=−(𝑎−𝑏)).
+If **𝑎 ≡ 𝑏 mod 𝑛**, then **𝑏 ≡ 𝑎 mod 𝑛**. This follows because if 𝑛 divides (𝑎−𝑏), it also divides (𝑏−𝑎)(as 𝑏−𝑎=−(𝑎−𝑏)).
 
 <span style="color: red">Example of Symmetry:</span>
 
-Since **20 ≡ 30 mod  10**, it follows that **30 ≡ 20 mod  10**, demonstrating that the difference of 20 and 30 (i.e., −10) is also divisible by 10.
+Since **20 ≡ 30 mod 10**, it follows that **30 ≡ 20 mod 10**, demonstrating that the difference of 20 and 30 (i.e., −10) is also divisible by 10.
 
 <span style="color: blue">Transitivity Property:</span>
 
-If **𝑎 ≡ 𝑏 mod  𝑛** and **𝑏 ≡ 𝑐 mod  𝑛**, then **𝑎 ≡ 𝑐 mod  𝑛**. This property ensures that congruence relations can form equivalence classes under modulo operations.
+If **𝑎 ≡ 𝑏 mod 𝑛** and **𝑏 ≡ 𝑐 mod 𝑛**, then **𝑎 ≡ 𝑐 mod 𝑛**. This property ensures that congruence relations can form equivalence classes under modulo operations.
 
 <span style="color: blue">Proof for Symmetry:</span>
 
@@ -318,9 +320,9 @@ $$
 ### Modular Exponentiation
 
 <span style="color: red">How to Compute:</span>
-- Compute $𝑐 = 𝑎^𝑚 \bmod 𝑛$
+- Compute $𝑐 = 𝑎^𝑚 \bmod\,𝑛$
 
-<span style="color: red">Example:</span> $𝑐 =𝑎^{10} \bmod 5$ 
+<span style="color: red">Example:</span> $𝑐 =𝑎^{10} \bmod\,5$ 
 - <span style="color: blue">Key Properties:</span>
     - Multiplicative property: $(𝑥^𝑎)^𝑏=𝑥^{𝑎𝑏}$ 
     - Distributive property over addition: $𝑥^{𝑎+𝑏} = 𝑥^𝑎 × 𝑥^𝑏$ 
@@ -328,19 +330,19 @@ $$
 ---
 
 <span style="color: red">How to Compute:</span>
-- Step by Step Solution for $3^{10} \bmod 5$:
-- Calculate $3^2 \bmod 5$:
+- Step by Step Solution for $3^{10} \bmod\,5$:
+- Calculate $3^2 \bmod\,5$:
     - $3^2 = 9$
-    - $9 \bmod 5 = 4$
-- Calculate $3^4 \bmod 5$ using the square of the result:
-    - $(3^2 \bmod 5)^2 = 4^2=16$ 
-    - $16 \bmod 5=1$
-- Calculate $3^8 \bmod 5$ using the square of $3^4 \bmod 5$:
-    - $(3^4 \bmod 5)^2 = 1^2 = 1$ 
-- Finally, calculate $3^{10} \bmod 5$:
-    - $3^{10} =(3^8×3^2) \bmod 5$
-    - $(1×4) mod 5 = 4$
-- Conclusion: $3^{10} \bmod 5 = 4$
+    - $9 \bmod\,5 = 4$
+- Calculate $3^4 \bmod\,5$ using the square of the result:
+    - $(3^2 \bmod\,5)^2 = 4^2=16$ 
+    - $16 \bmod\,5=1$
+- Calculate $3^8 \bmod\,5$ using the square of $3^4 \bmod\,5$:
+    - $(3^4 \bmod\,5)^2 = 1^2 = 1$ 
+- Finally, calculate $3^{10} \bmod\,5$:
+    - $3^{10} =(3^8×3^2) \bmod\,5$
+    - $(1×4) mod\,5 = 4$
+- Conclusion: $3^{10} \bmod\,5 = 4$
 
 ### Quiz Modular Exponentiation
 
