@@ -161,6 +161,17 @@ for (int i = 1; i <= 5; i++)
 > 	return arrayMatch(n - 1, a, b);
 > }
 > ```
+> 
+> Another answer
+> 
+> ```java
+> public static boolean arrayMatch2(int n, int[] a, int[] b) {
+> 	if (n == 0) {
+> 		return true;
+> 	}
+> 	return a[n - 1] == b[n - 1] && arrayMatch2(n - 1, a, b);
+> }
+> ```
 
 ## Exercise 5 - Triangle numbers
 
@@ -221,6 +232,17 @@ printFirstN(a, a.length);
 > 	}
 > 	printFirstN(a, n - 1);
 > 	System.out.println(a[n - 1]);
+> }
+> ```
+> 
+> Another answer
+> 
+> ```java
+> public static void printFirstN2(String[] a, int n) {
+> 	if (n != 0) {
+> 		System.out.println(a[n - 1]);
+> 		printFirstN2(a, n - 1);
+> 	}
 > }
 > ```
 
@@ -431,3 +453,24 @@ public class Ackermann {
 
 > [!CAUTION] CAUTION
 > Highly explosive! Use very small values for $m$ and $n$ only.
+
+# Bonus: Hanoi
+
+```java
+public class Hanoi {
+    public static void hanoi(int n, String from, String to, String via) {
+        if (n == 1) {
+            System.out.println("Move disk from " + from + " to " + to);
+        } else {
+            hanoi(n - 1, from, via, to);
+            System.out.println("Move disk from " + from + " to " + to);
+            hanoi(n - 1, via, to, from);
+        }
+    }
+    
+    public static void main(String[] args) {
+        int n = 3; // number of disks
+        hanoi(n, "A", "C", "B");
+    }
+}
+```
