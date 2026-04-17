@@ -264,11 +264,6 @@ const footerClassName = footerClass.join(" ");
 // 检查是否应该启用半透明效果
 const shouldEnableTransparency = isOverlayMode && isBackgroundEnabled;
 
-// 为组件添加半透明效果的CSS类
-const transparentClass = shouldEnableTransparency
-	? "wallpaper-transparent"
-	: "";
-
 const navbarWidthFull = siteConfig.navbar.widthFull ?? false;
 const stickyNavbar = siteConfig.navbar.stickyNavbar ?? false;
 
@@ -469,6 +464,8 @@ const bannerCarouselInterval = Math.max(
             var container = document.getElementById('banner-images-container');
             if (!container) return;
 
+            var WALLPAPER_BANNER = 'banner';
+
             var mobileCount = parseInt(container.dataset.mobileCount || '0', 10);
             var desktopCount = parseInt(container.dataset.desktopCount || '0', 10);
             if (mobileCount <= 1 && desktopCount <= 1) return;
@@ -483,6 +480,10 @@ const bannerCarouselInterval = Math.max(
                 var stored = localStorage.getItem('bannerCarouselEnabled');
                 if (stored === null) return defaultEnabled;
                 return stored === 'true';
+            }
+
+            function isBannerWallpaperMode() {
+                return document.documentElement.getAttribute('data-wallpaper-mode') === WALLPAPER_BANNER;
             }
 
             // 收集所有帧内容
@@ -585,6 +586,7 @@ const bannerCarouselInterval = Math.max(
 
             function startCarousel() {
                 stopCarousel();
+                if (!isBannerWallpaperMode()) return;
                 if (!isCarouselEnabled()) return;
 
                 // 首张图立即启动 Ken Burns 缩放
@@ -592,6 +594,7 @@ const bannerCarouselInterval = Math.max(
                 applyInitialKB('banner-image-slot-desktop');
 
                 timerId = setInterval(function() {
+                    if (!isBannerWallpaperMode()) { stopCarousel(); return; }
                     if (!isCarouselEnabled()) { stopCarousel(); return; }
                     crossfade('banner-image-slot-mobile', mobileCount, 'mobile');
                     crossfade('banner-image-slot-desktop', desktopCount, 'desktop');
@@ -797,7 +800,7 @@ const bannerCarouselInterval = Math.max(
 )}
 
 <!-- Main content -->
-<div class={`absolute w-full z-30 pointer-events-none ${mobileNonHomeBannerClass ? 'mobile-main-no-banner' : ''} ${!(isBannerMode && isBackgroundEnabled) ? 'no-banner-layout' : ''} ${transparentClass}`} style={`top: ${finalMainPanelTop}`}>
+<div class={`absolute w-full z-30 pointer-events-none ${mobileNonHomeBannerClass ? 'mobile-main-no-banner' : ''} ${!(isBannerMode && isBackgroundEnabled) ? 'no-banner-layout' : ''}`} style={`top: ${finalMainPanelTop}`}>
     <!-- The pointer-events-none here prevent blocking the click event of the TOC -->
     <div class="relative w-full xl:w-[92vw] max-w-(--page-width) mx-auto pointer-events-auto">
         <div id="main-grid"
@@ -859,7 +862,7 @@ const bannerCarouselInterval = Math.max(
                         {effectiveHasLeftComponents && (
                             <SideBar
                                 side={effectiveIsBothSidebars ? "left" : undefined}
-                                class={`${sidebarClass} ${transparentClass}`}
+                                class={sidebarClass}
                                 headings={headings}
                             />
                         )}
@@ -869,7 +872,7 @@ const bannerCarouselInterval = Math.max(
             ) : (
                 <div id="left-sidebar-dynamic" class="contents transition-swup-fade">
                     {effectiveIsBothSidebars && effectiveHasLeftComponents && (
-                        <SideBar side="left" class={`${sidebarClass} ${transparentClass}`} headings={headings}></SideBar>
+						<SideBar side="left" class={sidebarClass} headings={headings}></SideBar>
                     )}
                 </div>
             )}
@@ -905,7 +908,7 @@ const bannerCarouselInterval = Math.max(
                 <>
                     <div id="right-sidebar-static" class="contents">
                         {(effectiveIsBothSidebars || sidebarLayoutConfig.position === "right") && effectiveHasRightComponents && (
-                            <SideBar side="right" class={`${rightSidebarClass} ${transparentClass}`} headings={headings}></SideBar>
+							<SideBar side="right" class={rightSidebarClass} headings={headings}></SideBar>
                         )}
                     </div>
                     <div id="right-sidebar-dynamic" class="hidden transition-swup-fade"></div>
@@ -913,7 +916,7 @@ const bannerCarouselInterval = Math.max(
             ) : (
                 <div id="right-sidebar-dynamic" class="contents transition-swup-fade">
                     {effectiveIsBothSidebars && effectiveHasRightComponents && (
-                        <SideBar side="right" class={`${rightSidebarClass} ${transparentClass}`} headings={headings}></SideBar>
+						<SideBar side="right" class={rightSidebarClass} headings={headings}></SideBar>
                     )}
                 </div>
             )}
@@ -921,7 +924,7 @@ const bannerCarouselInterval = Math.max(
             {/* 移动端底部组件 - 768px及以下显示 */}
             {sidebarLayoutConfig.mobileBottomComponents && sidebarLayoutConfig.mobileBottomComponents.length > 0 && (
                 <div id="mobile-bottom-sidebar" class="col-span-1 block md:hidden mt-4">
-                    <SideBar side="bottom" class={`${transparentClass}`} headings={headings}></SideBar>
+					<SideBar side="bottom" headings={headings}></SideBar>
                 </div>
             )}
 
