@@ -17,12 +17,13 @@ comment: true
 # sourceLink: 
 ---
 
-# A Linked List Class to Represent Polynomials
+# A Linked List Class to Represent Polynomials 用链表类表示多项式
 
-## Introduction
+## Introduction 介绍
 
-In this exercise you will create a simple application that manipulates polynomial expressions. You will create a linked list class to represent the expressions.
-> [!NOTE] Vocabulary
+In this exercise you will create a simple application that manipulates polynomial expressions. You will create a linked list class to represent the expressions.  
+在本练习中，你将创建一个用于操作多项式表达式的简单应用程序。你需要实现一个链表类来表示这些表达式。
+> [!NOTE] Vocabulary 术语
 > Polynomial 多项式  
 > 
 > Term 项  
@@ -31,9 +32,10 @@ In this exercise you will create a simple application that manipulates polynomia
 > 
 > Power 指数
 
-## Recap on polynomials
+## Recap on polynomials 多项式回顾
 
-You probably learnt about polynomial expressions at school. However, in case you have forgotten all that, a polynomial expression of one variable is an expression in which multiples of powers of that variable are added together. So for example the following are all polynomial expressions of one variable:
+You probably learnt about polynomial expressions at school. However, in case you have forgotten all that, a polynomial expression of one variable is an expression in which multiples of powers of that variable are added together. So for example the following are all polynomial expressions of one variable:  
+你可能在学校学过多项式表达式。不过如果你已经忘了，单变量多项式就是把该变量各次幂的若干倍数相加得到的表达式。例如下面这些都属于单变量多项式：
 $$
 \begin{aligned}
 &3x^2-2x+1 \\ 
@@ -42,15 +44,18 @@ $$
 &3x^6+2 \\
 \end{aligned}
 $$
-Each of the components that we add together is referred to as a _term_. So $3x^6+2$ has two terms, $3x^6$ and $2$. The number by which we multiply the variable is known as the _coefficient_ of the term and the number to which we raise $x$ is the _power_. So in the term $3x^6$ the coefficient is $3$ and the power is $6$. Note that $x^0=1$ so a number such as $2$ can be treated as a term whose coefficient is $2$ and whose power is $0$.
+Each of the components that we add together is referred to as a _term_. So $3x^6+2$ has two terms, $3x^6$ and $2$. The number by which we multiply the variable is known as the _coefficient_ of the term and the number to which we raise $x$ is the _power_. So in the term $3x^6$ the coefficient is $3$ and the power is $6$. Note that $x^0=1$ so a number such as $2$ can be treated as a term whose coefficient is $2$ and whose power is $0$.  
+我们相加的每个组成部分都称为一个 _term_（项）。例如 $3x^6+2$ 有两项：$3x^6$ 和 $2$。变量前面的乘数称为该项的 _coefficient_（系数），而 $x$ 的指数称为 _power_（幂次）。所以在 $3x^6$ 中，系数是 $3$，幂次是 $6$。注意 $x^0=1$，因此像 $2$ 这样的常数也可看作系数为 $2$、幂次为 $0$ 的一项。
 
-Polynomials can be added together. For example
+Polynomials can be added together. For example  
+多项式可以相加。例如：
 
 $$
 5x^3+2x^2+1+2x^4+x^2+5x-4=2x^4+5x^3+3x^2+5x-3
 $$
 
-They can also be multiplied together. For example
+They can also be multiplied together. For example  
+多项式也可以相乘。例如：
 
 $$
 \begin{aligned}
@@ -61,26 +66,34 @@ $$
 \end{aligned}
 $$
 
-## The Polynomial Calculator
+## The Polynomial Calculator 多项式计算器
 
-Download the source code on the module website, then compile and run it. You should see something resembling Figure 1 overleaf.
+Download the source code on the module website, then compile and run it. You should see something resembling Figure 1 overleaf.  
+从课程模块网站下载源代码，然后编译并运行。你应该会看到与下图（图 1）类似的界面。
 ![](img/Pasted_image_20260318155524.png)
-> Figure 1 The Polynomial Calculator Application
+> Figure 1 The Polynomial Calculator Application  
+> 图 1 多项式计算器应用
 
-Clicking any of the keys ‘0’-‘9’, ‘x’ , ‘^’ ‘+’ or ‘-’ results in the same character appearing in the entry area. You can use them to write a polynomial expression in the entry area, with ‘^’ representing the operation of raising a variable to a power.
+Clicking any of the keys ‘0’-‘9’, ‘x’ , ‘^’ ‘+’ or ‘-’ results in the same character appearing in the entry area. You can use them to write a polynomial expression in the entry area, with ‘^’ representing the operation of raising a variable to a power.  
+点击 ‘0’ 到 ‘9’、‘x’、‘^’、‘+’ 或 ‘-’ 键，输入区会出现对应字符。你可以用这些键在输入区书写多项式表达式，其中 ‘^’ 表示幂运算。
 
-If you click on the ‘=’ key the expression in the entry area will be checked to see if it is a syntactically correct polynomial. If it is not then an error message is displayed. If the expression is correct then it _should_ be simplified, but that does not happen yet, so you are going to have to write the code that does it.
+If you click on the ‘=’ key the expression in the entry area will be checked to see if it is a syntactically correct polynomial. If it is not then an error message is displayed. If the expression is correct then it _should_ be simplified, but that does not happen yet, so you are going to have to write the code that does it.  
+点击 ‘=’ 键后，程序会检查输入区表达式是否为语法正确的多项式。若不正确，会显示错误信息。若正确，程序本应将其化简，但目前还没有实现，所以这部分代码需要你来完成。
 
-Clicking on the ‘MS’ key moves the expression in the entry area to the memory area. Clicking on ‘M+’ _should_ add the expressions in the two areas and put the result in the memory area. Clicking on ‘M*’ _should_ multiply them and put the result in the memory area. However neither of those two keys work yet. You are going to fix that. ‘MC’ clears the memory area.
+Clicking on the ‘MS’ key moves the expression in the entry area to the memory area. Clicking on ‘M+’ _should_ add the expressions in the two areas and put the result in the memory area. Clicking on ‘M*’ _should_ multiply them and put the result in the memory area. However neither of those two keys work yet. You are going to fix that. ‘MC’ clears the memory area.  
+点击 ‘MS’ 键会把输入区表达式存入存储区。点击 ‘M+’ 本应把两个区域中的表达式相加并将结果放入存储区；点击 ‘M*’ 本应执行乘法并把结果放入存储区。不过这两个键目前都还不能正常工作，你需要修复它们。‘MC’ 用于清空存储区。
 
-The key ‘C’ clears the entry area and the key ‘Del’ deletes the last character in the entry area.
+The key ‘C’ clears the entry area and the key ‘Del’ deletes the last character in the entry area.  
+‘C’ 键清空输入区，‘Del’ 键删除输入区最后一个字符。
 
 ![](img/Pasted_image_20260318155713.png)
-> Figure 2 The Polynomial Calculator
+> Figure 2 The Polynomial Calculator  
+> 图 2 多项式计算器
 
-### What you have to do
+### What you have to do 你需要完成的内容
 
-The main class of the application, which is called _PolyCalc_, contains the following two methods
+The main class of the application, which is called _PolyCalc_, contains the following two methods  
+应用的主类名为 _PolyCalc_，其中包含以下两个方法：
 ```java
 public static void main(String[] args) {
 	javax.swing.SwingUtilities.invokeLater(
@@ -99,40 +112,50 @@ private static void createAndShowGui() {
 	GUI view = new GUI(entryPoly, storePoly);
 }
 ```
-As you can see, two objects of the class _ALPoly_ are created and passed to the GUI class. The two _ALPoly_ objects implement an interface _Polynomial_ which is set out in appendix A. The Polynomial interface defines methods to be implemented by objects that represent polynomial equations. The _ALPoly_ class implements them using an ArrayList. However there are a number of _problems_ with it:
-- The methods _addPoly_ and _multiplyPoly_ don’t do anything. That’s why the _M+_ and _M\*_ keys don’t work.
-- An ArrayList isn’t a very sensible choice here, for reasons set out in the lecture.
-To fix this you will create an implementation a class that implements the _Polynomial_ interface and stores data in a linked list of your own creation. You should modify the main method so as to use this new class. You should not make any other modifications to the code. The Java API already contains a _LinkedList_ class, but you should **_not_** use it.
+As you can see, two objects of the class _ALPoly_ are created and passed to the GUI class. The two _ALPoly_ objects implement an interface _Polynomial_ which is set out in appendix A. The Polynomial interface defines methods to be implemented by objects that represent polynomial equations. The _ALPoly_ class implements them using an ArrayList. However there are a number of _problems_ with it:  
+如你所见，代码创建了两个 _ALPoly_ 对象并传给 GUI 类。这两个 _ALPoly_ 对象实现了附录 A 中定义的 _Polynomial_ 接口。_Polynomial_ 接口规定了表示多项式对象应实现的方法。_ALPoly_ 用 ArrayList 实现这些方法，但它存在一些问题：
+- The methods _addPoly_ and _multiplyPoly_ don’t do anything. That’s why the _M+_ and _M\*_ keys don’t work.<br>_addPoly_ 和 _multiplyPoly_ 方法目前没有实际功能，所以 _M+_ 与 _M\*_ 按钮无法工作。
+- An ArrayList isn’t a very sensible choice here, for reasons set out in the lecture.<br>根据课堂中讲过的原因，这里使用 ArrayList 并不是很合适。
+To fix this you will create an implementation a class that implements the _Polynomial_ interface and stores data in a linked list of your own creation. You should modify the main method so as to use this new class. You should not make any other modifications to the code. The Java API already contains a _LinkedList_ class, but you should **_not_** use it.  
+为了解决这些问题，你需要自己实现一个类：它实现 _Polynomial_ 接口，并使用你自己编写的链表来存储数据。你应修改 main 方法以使用这个新类，除此之外不应修改其他代码。Java API 虽然有现成的 _LinkedList_ 类，但你 **不应** 使用它。
 
-#### Exercise 1
+#### Exercise 1 练习 1
 
-Create a class that implements _Polynomial_ and which contains a linked list similar to that shown in the lecture notes, except that the data elements of the node are objects of the _Term_ class rather than Strings. The _Term_ class is one of those that has been supplied to you.
+Create a class that implements _Polynomial_ and which contains a linked list similar to that shown in the lecture notes, except that the data elements of the node are objects of the _Term_ class rather than Strings. The _Term_ class is one of those that has been supplied to you.  
+创建一个实现 _Polynomial_ 的类，内部使用与课件类似的链表结构；不同的是，节点中的数据元素应是 _Term_ 类对象，而不是字符串。_Term_ 类已提供给你。
 
-Implement the _addTerm_ method so that it just adds to the head of the list. Implement the iterator method in a manner similar to that shown in the lecture notes. Implement the _addPoly_ and _multiplyByPoly_ methods so that they do nothing. Modify the main method so that it uses your new class, and check that the application behaves in the way you would expect.
+Implement the _addTerm_ method so that it just adds to the head of the list. Implement the iterator method in a manner similar to that shown in the lecture notes. Implement the _addPoly_ and _multiplyByPoly_ methods so that they do nothing. Modify the main method so that it uses your new class, and check that the application behaves in the way you would expect.  
+实现 _addTerm_ 方法，使其仅在链表头部插入项。按照课件示例实现迭代器方法。将 _addPoly_ 和 _multiplyByPoly_ 先实现为空操作。修改 main 方法以使用你的新类，并检查应用行为是否符合预期。
 
-#### Exercise 2
+#### Exercise 2 练习 2
 
-Modify your class so that, rather than adding terms at the head of the list you add them so that terms are in order of their power. In other words if you added the terms $3x^2$, $4$, $-5x^2$ and $x^3$ in that order the polynomial would be displayed as $x^3+3x^2-5x^2+4$
+Modify your class so that, rather than adding terms at the head of the list you add them so that terms are in order of their power. In other words if you added the terms $3x^2$, $4$, $-5x^2$ and $x^3$ in that order the polynomial would be displayed as $x^3+3x^2-5x^2+4$  
+修改你的类：不要再总是头插，而是按幂次顺序插入各项。换句话说，若按顺序加入 $3x^2$、$4$、$-5x^2$、$x^3$，显示结果应为 $x^3+3x^2-5x^2+4$。
 
-For the time being don’t worry about the fact that you end up with more than one term with the same power.
+For the time being don’t worry about the fact that you end up with more than one term with the same power.  
+暂时不用处理“相同幂次出现多项”的问题。
 
-#### Exercise 3
+#### Exercise 3 练习 3
 
-Modify the implementation so that when you add two terms with the same power, you end up with only one term in the expression. So for example rather than $x^3+3x^2-5x^2+4$ you get $x^3-2x^2+4$. Don’t worry about the fact that some coefficients may be $0$. So for example if you added $3x^2$, $4$, $-3x^2$ and $x^3$ it would be OK to end up with $x^3+0x^2+4$.
+Modify the implementation so that when you add two terms with the same power, you end up with only one term in the expression. So for example rather than $x^3+3x^2-5x^2+4$ you get $x^3-2x^2+4$. Don’t worry about the fact that some coefficients may be $0$. So for example if you added $3x^2$, $4$, $-3x^2$ and $x^3$ it would be OK to end up with $x^3+0x^2+4$.  
+继续修改实现：当加入两个幂次相同的项时，应合并成表达式中的一项。比如将 $x^3+3x^2-5x^2+4$ 合并为 $x^3-2x^2+4$。暂时不用担心系数可能变成 $0$ 的情况。例如加入 $3x^2$、$4$、$-3x^2$、$x^3$ 后得到 $x^3+0x^2+4$ 也是可以接受的。
 
-#### Exercise 4
+#### Exercise 4 练习 4
 
-Modify the implementation so that terms with a coefficient of $0$ are removed. In other words you get $x^3+4$ rather than $x^3+0x^2+4$.
+Modify the implementation so that terms with a coefficient of $0$ are removed. In other words you get $x^3+4$ rather than $x^3+0x^2+4$.  
+继续修改实现：删除系数为 $0$ 的项。也就是说，结果应为 $x^3+4$，而不是 $x^3+0x^2+4$。
 
-#### Exercise 5
+#### Exercise 5 练习 5
 
-Implement the addPoly method. **Hint:** you have already implemented the _addTerm_ method. Think about what that method does and how you can use it to implement addPoly.
+Implement the addPoly method. **Hint:** you have already implemented the _addTerm_ method. Think about what that method does and how you can use it to implement addPoly.  
+实现 addPoly 方法。**提示：** 你已经实现了 _addTerm_，思考它的行为以及如何复用它来实现 addPoly。
 
-#### Exercise 6
+#### Exercise 6 练习 6
 
-Implement the _multiplyByPoly_ method. **Hint:** make a copy of your internal linked list. Then call the _clear_ method. Then use _addTerm_ repeatedly.
+Implement the _multiplyByPoly_ method. **Hint:** make a copy of your internal linked list. Then call the _clear_ method. Then use _addTerm_ repeatedly.  
+实现 _multiplyByPoly_ 方法。**提示：** 先复制一份内部链表，再调用 _clear_，然后重复调用 _addTerm_ 构建结果。
 
-## Appendix: The Polynomial interface
+## Appendix: The Polynomial interface 附录：Polynomial 接口
 
 ```java
 package polycalc;
@@ -177,7 +200,7 @@ public interface Polynomial extends Iterable<Term> {
 }
 ```
 
-> [!CHECK] Reference Answer
+> [!CHECK] Reference Answer 参考答案
 
 ```java
 // ALPoly.java
