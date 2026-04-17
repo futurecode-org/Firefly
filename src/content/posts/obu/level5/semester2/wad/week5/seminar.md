@@ -4,7 +4,7 @@ published: 2026-04-08
 # updated: 
 description: For this practical you will be learning to use the development server that is built into Flask.
 image: ./141853037.png
-tags: [Web, DOM]
+tags: [Web, Flask]
 category: Web Application Development
 draft: false
 pinned: false
