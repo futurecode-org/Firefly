@@ -17,9 +17,9 @@ comment: true
 # sourceLink: 
 ---
 
-# Practical: Sorting 排序实践
+# Practical: Sorting<br>实践：排序
 
-## Exercise 1 - Setup 练习 1：环境准备
+## Exercise 1 - Setup
 
 Extract the code provided, organise your folders, and get a project set up as usual. You should now see the following files in the project:  
 提取给定代码，整理好文件夹，并像平常一样完成项目初始化。此时你应在项目中看到以下文件：
@@ -28,7 +28,7 @@ Extract the code provided, organise your folders, and get a project set up as us
 Within _SortExplore_, try changing the value of _numElements_ to different values (less than about 200,000 is best), watching how long it takes for each sort.  
 在 _SortExplore_ 中，尝试把 _numElements_ 改成不同数值（建议小于约 200,000），观察每种排序所花费的时间。
 
-## Exercise 2 练习 2
+## Exercise 2
 
 Count the number of steps that _insertionSort_ takes, in the following way:  
 按如下方式统计 _insertionSort_ 执行的步数：
@@ -45,7 +45,7 @@ Also add a comment at each place you increase the value of the variable _stepCou
 Run the main program and note how many accesses are done by the insertion sort.  
 运行主程序，并记录插入排序进行了多少次访问。
 
-## Exercise 3 练习 3
+## Exercise 3
 
 Similarly, also add statement(s) to the _qSort_ method to count the number of steps that it takes:  
 同样地，在 _qSort_ 方法中加入语句来统计其步数：
@@ -59,7 +59,7 @@ Also add a comment at each place you increase the value of the variable _stepCou
 Run the main program and note how many accesses are done by _qSort_.  
 运行主程序，并记录 _qSort_ 的访问次数。
 
-## Exercise 4 练习 4
+## Exercise 4
 
 Add statements to the main program so that your sequence is sorted _twice_ by each method – that is, for each sorting algorithm, the already-sorted sequence is sorted again, and the number of accesses is counted afresh.  
 在主程序中添加语句，使每种排序方法都对同一序列执行 _两次_ 排序。也就是对每种算法，把已经排好序的序列再排一次，并重新统计访问次数。
@@ -67,7 +67,7 @@ Add statements to the main program so that your sequence is sorted _twice_ by ea
 Append the content of the output window to your source text for _SortExplore_ in a comment `/* … */` and include some brief comments on the differences/similarities between the two sorting algorithms: Which is quicker (in terms of the number of accesses)? What difference does it make the second time round? Why?  
 将输出窗口内容以 `/* … */` 注释形式附加到 _SortExplore_ 的源码中，并简要分析两种排序算法的异同：哪个更快（以访问次数衡量）？第二次排序有什么变化？为什么？
 
-> [!CHECK] Reference Answer 参考答案
+> [!CHECK] Reference Answer
 
 ```java
 // Sequence.java
