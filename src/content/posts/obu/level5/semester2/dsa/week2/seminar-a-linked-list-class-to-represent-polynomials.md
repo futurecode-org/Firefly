@@ -17,13 +17,13 @@ comment: true
 # sourceLink: 
 ---
 
-# A Linked List Class to Represent Polynomials 用链表类表示多项式
+# A Linked List Class to Represent Polynomials<br>用链表类表示多项式
 
-## Introduction 介绍
+## Introduction<br>介绍
 
 In this exercise you will create a simple application that manipulates polynomial expressions. You will create a linked list class to represent the expressions.  
-在本练习中，你将创建一个用于操作多项式表达式的简单应用程序。你需要实现一个链表类来表示这些表达式。
-> [!NOTE] Vocabulary 术语
+
+> [!NOTE] Vocabulary
 > Polynomial 多项式  
 > 
 > Term 项  
@@ -32,7 +32,7 @@ In this exercise you will create a simple application that manipulates polynomia
 > 
 > Power 指数
 
-## Recap on polynomials 多项式回顾
+## Recap on polynomials<br>多项式回顾
 
 You probably learnt about polynomial expressions at school. However, in case you have forgotten all that, a polynomial expression of one variable is an expression in which multiples of powers of that variable are added together. So for example the following are all polynomial expressions of one variable:  
 你可能在学校学过多项式表达式。不过如果你已经忘了，单变量多项式就是把该变量各次幂的若干倍数相加得到的表达式。例如下面这些都属于单变量多项式：
@@ -66,7 +66,7 @@ $$
 \end{aligned}
 $$
 
-## The Polynomial Calculator 多项式计算器
+## The Polynomial Calculator<br>多项式计算器
 
 Download the source code on the module website, then compile and run it. You should see something resembling Figure 1 overleaf.  
 从课程模块网站下载源代码，然后编译并运行。你应该会看到与下图（图 1）类似的界面。
@@ -90,7 +90,7 @@ The key ‘C’ clears the entry area and the key ‘Del’ deletes the last cha
 > Figure 2 The Polynomial Calculator  
 > 图 2 多项式计算器
 
-### What you have to do 你需要完成的内容
+### What you have to do<br>你需要完成的内容
 
 The main class of the application, which is called _PolyCalc_, contains the following two methods  
 应用的主类名为 _PolyCalc_，其中包含以下两个方法：
@@ -119,7 +119,7 @@ As you can see, two objects of the class _ALPoly_ are created and passed to the 
 To fix this you will create an implementation a class that implements the _Polynomial_ interface and stores data in a linked list of your own creation. You should modify the main method so as to use this new class. You should not make any other modifications to the code. The Java API already contains a _LinkedList_ class, but you should **_not_** use it.  
 为了解决这些问题，你需要自己实现一个类：它实现 _Polynomial_ 接口，并使用你自己编写的链表来存储数据。你应修改 main 方法以使用这个新类，除此之外不应修改其他代码。Java API 虽然有现成的 _LinkedList_ 类，但你 **不应** 使用它。
 
-#### Exercise 1 练习 1
+#### Exercise 1
 
 Create a class that implements _Polynomial_ and which contains a linked list similar to that shown in the lecture notes, except that the data elements of the node are objects of the _Term_ class rather than Strings. The _Term_ class is one of those that has been supplied to you.  
 创建一个实现 _Polynomial_ 的类，内部使用与课件类似的链表结构；不同的是，节点中的数据元素应是 _Term_ 类对象，而不是字符串。_Term_ 类已提供给你。
@@ -127,7 +127,7 @@ Create a class that implements _Polynomial_ and which contains a linked list sim
 Implement the _addTerm_ method so that it just adds to the head of the list. Implement the iterator method in a manner similar to that shown in the lecture notes. Implement the _addPoly_ and _multiplyByPoly_ methods so that they do nothing. Modify the main method so that it uses your new class, and check that the application behaves in the way you would expect.  
 实现 _addTerm_ 方法，使其仅在链表头部插入项。按照课件示例实现迭代器方法。将 _addPoly_ 和 _multiplyByPoly_ 先实现为空操作。修改 main 方法以使用你的新类，并检查应用行为是否符合预期。
 
-#### Exercise 2 练习 2
+#### Exercise 2
 
 Modify your class so that, rather than adding terms at the head of the list you add them so that terms are in order of their power. In other words if you added the terms $3x^2$, $4$, $-5x^2$ and $x^3$ in that order the polynomial would be displayed as $x^3+3x^2-5x^2+4$  
 修改你的类：不要再总是头插，而是按幂次顺序插入各项。换句话说，若按顺序加入 $3x^2$、$4$、$-5x^2$、$x^3$，显示结果应为 $x^3+3x^2-5x^2+4$。
@@ -135,27 +135,27 @@ Modify your class so that, rather than adding terms at the head of the list you 
 For the time being don’t worry about the fact that you end up with more than one term with the same power.  
 暂时不用处理“相同幂次出现多项”的问题。
 
-#### Exercise 3 练习 3
+#### Exercise 3
 
 Modify the implementation so that when you add two terms with the same power, you end up with only one term in the expression. So for example rather than $x^3+3x^2-5x^2+4$ you get $x^3-2x^2+4$. Don’t worry about the fact that some coefficients may be $0$. So for example if you added $3x^2$, $4$, $-3x^2$ and $x^3$ it would be OK to end up with $x^3+0x^2+4$.  
 继续修改实现：当加入两个幂次相同的项时，应合并成表达式中的一项。比如将 $x^3+3x^2-5x^2+4$ 合并为 $x^3-2x^2+4$。暂时不用担心系数可能变成 $0$ 的情况。例如加入 $3x^2$、$4$、$-3x^2$、$x^3$ 后得到 $x^3+0x^2+4$ 也是可以接受的。
 
-#### Exercise 4 练习 4
+#### Exercise 4
 
 Modify the implementation so that terms with a coefficient of $0$ are removed. In other words you get $x^3+4$ rather than $x^3+0x^2+4$.  
 继续修改实现：删除系数为 $0$ 的项。也就是说，结果应为 $x^3+4$，而不是 $x^3+0x^2+4$。
 
-#### Exercise 5 练习 5
+#### Exercise 5
 
 Implement the addPoly method. **Hint:** you have already implemented the _addTerm_ method. Think about what that method does and how you can use it to implement addPoly.  
 实现 addPoly 方法。**提示：** 你已经实现了 _addTerm_，思考它的行为以及如何复用它来实现 addPoly。
 
-#### Exercise 6 练习 6
+#### Exercise 6
 
 Implement the _multiplyByPoly_ method. **Hint:** make a copy of your internal linked list. Then call the _clear_ method. Then use _addTerm_ repeatedly.  
 实现 _multiplyByPoly_ 方法。**提示：** 先复制一份内部链表，再调用 _clear_，然后重复调用 _addTerm_ 构建结果。
 
-## Appendix: The Polynomial interface 附录：Polynomial 接口
+## Appendix: The Polynomial interface<br>附录：Polynomial 接口
 
 ```java
 package polycalc;
@@ -200,7 +200,7 @@ public interface Polynomial extends Iterable<Term> {
 }
 ```
 
-> [!CHECK] Reference Answer 参考答案
+> [!CHECK] Reference Answer
 
 ```java
 // ALPoly.java
