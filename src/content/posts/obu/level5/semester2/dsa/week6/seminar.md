@@ -17,7 +17,7 @@ comment: true
 # sourceLink: 
 ---
 
-# Exercises AVL Tree<br>AVL 树练习
+# Exercises AVL Tree <br>AVL 树练习
 
 An AVL tree is a type of self-balancing binary search tree. The defining characteristic of an AVL tree is its strict balance condition. For every node in the tree, the heights of its left and right subtrees can differ by at most one. This height difference is known as the balance factor.  
 AVL 树是一种自平衡二叉搜索树。其核心特征是严格平衡条件：对于树中的每个节点，左右子树高度差最多为 1。这个高度差称为平衡因子（balance factor）。
@@ -37,13 +37,13 @@ If an insertion or deletion operation causes any node's balance factor to become
 Download the code provided on the website, organise your folders, and get a project set up as usual. You should now see the following files in the project:  
 下载网站提供的代码，整理好文件夹，并按常规方式完成项目搭建。此时项目中应包含以下文件：
 
-- `AVLTree.java` – a class representing AVL trees of integers<br>`AVLTree.java`：表示整数 AVL 树的类
-- `Main.java` – a class of the main program<br>`Main.java`：主程序类
+- `AVLTree.java` – a class representing AVL trees of integers<br>`AVLTree.java` - 表示整数 AVL 树的类
+- `Main.java` – a class of the main program<br>`Main.java` - 主程序类
 
-## Exercise 1 – Inserting<br>练习 1：插入
+## Exercise 1 – Inserting <br>练习 1：插入
 
 Following the logic of building a BST, implement the  
-按照构建 BST 的逻辑，实现：
+按照构建二叉搜索树的逻辑，实现：
 
 - `insert(Node n, int val)`
 
@@ -71,7 +71,7 @@ function, which can build the tree as a regular binary search tree.
 > }
 > ```
 
-## Exercise 2 – Height<br>练习 2：高度
+## Exercise 2 – Height <br>练习 2：高度
 
 Implement the  
 实现：
@@ -95,7 +95,7 @@ function, that can calculate the height of the tree rooted at the node.
 > }
 > ```
 
-## Exercise 3 – Update the balance factor<br>练习 3：更新平衡因子
+## Exercise 3 – Update the balance factor <br>练习 3：更新平衡因子
 
 Implement the  
 实现：
@@ -123,7 +123,7 @@ function that can update the node's balance factor.
 > }
 > ```
 
-## Exercise 4 – Basic rotation<br>练习 4：基础旋转
+## Exercise 4 – Basic rotation <br>练习 4：基础旋转
 
 Inserting a new node into an AVL tree may change the balance of the tree. There are four imbalanced scenarios: LL, RR, LR, and RL cases. To balance the imbalanced tree, there are two basic ways to rebalance the tree that suit different scenarios, which are called left rotation and right rotation.  
 向 AVL 树插入新节点后，树的平衡可能被破坏。常见四种失衡场景：LL、RR、LR、RL。为恢复平衡，需要根据场景采用两种基本旋转方式：左旋与右旋。
@@ -180,7 +180,7 @@ functions that can rotate the imbalanced tree rooted at the node.
 > }
 > ```
 
-## Exercise 5 – Rebalance<br>练习 5：重平衡
+## Exercise 5 – Rebalance <br>练习 5：重平衡
 
 Implement the  
 实现：
@@ -236,7 +236,7 @@ function that can apply two basic rotation functions to rebuild the balance of t
 > }
 > ```
 
-## Exercise 6 – Rebalance<br>练习 6：插入后重平衡
+## Exercise 6 – Rebalance <br>练习 6：插入后重平衡
 
 Modify the `insert` function to make the tree rebalance when inserting a new node into the tree.  
 修改 `insert` 函数，使得插入新节点后树能够自动重平衡。
@@ -270,7 +270,7 @@ Modify the `insert` function to make the tree rebalance when inserting a new nod
 > }
 > ```
 
-## Exercise 7 – Execution<br>练习 7：运行与验证
+## Exercise 7 – Execution <br>练习 7：运行与验证
 
 Completing the AVLTree class, we can then build an AVL tree in the main program.  
 完成 AVLTree 类后，就可以在主程序中构建 AVL 树。
