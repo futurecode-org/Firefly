@@ -17,17 +17,17 @@ comment: true
 # sourceLink: 
 ---
 
-# Exercises Binary Trees<br>二叉树练习
+# Exercises Binary Trees <br>二叉树练习
 
-## Exercise 1 - Getting set up<br>练习 1：环境准备
+## Exercise 1 - Getting set up <br>练习 1：环境准备
 
 Download the code provided on the website, organise your folders, and get a project set up as usual. You should now see the following files in the project:  
 从网站下载提供的代码，整理好文件夹，并按常规方式完成项目搭建。此时你应在项目中看到以下文件：
 
-- **TreePlay.java** - the main program<br>**TreePlay.java**：主程序
-- **BinaryTree.java** - a class representing binary trees of integers<br>**BinaryTree.java**：表示整数二叉树的类
-- **TreeUtilities.java** - various utilities, including for generating random trees and for pop-up windows displaying binary trees<br>**TreeUtilities.java**：各种工具方法，包括生成随机树与弹窗显示二叉树
-- **TreeNavigator.java** - a class with some empty method stubs, which you will complete in the practical<br>**TreeNavigator.java**：包含若干待补全方法桩的类，你将在本次实践中完成它们
+- **TreePlay.java** - the main program<br>**TreePlay.java** - 主程序
+- **BinaryTree.java** - a class representing binary trees of integers<br>**BinaryTree.java** - 表示整数二叉树的类
+- **TreeUtilities.java** - various utilities, including for generating random trees and for pop-up windows displaying binary trees<br>**TreeUtilities.java** - 各种工具方法，包括生成随机树与弹窗显示二叉树
+- **TreeNavigator.java** - a class with some empty method stubs, which you will complete in the practical<br>**TreeNavigator.java** - 包含若干待补全方法桩的类，你将在本次实践中完成它们
 
 Have a look at the `main()` method in the main class `TreePlay` and its comments. Now run the program to see what it does.  
 先查看主类 `TreePlay` 中的 `main()` 方法及其注释，然后运行程序观察其行为。
@@ -35,7 +35,7 @@ Have a look at the `main()` method in the main class `TreePlay` and its comments
 Please note that you _don’t_ need to know how the creation of a random tree or the display of a tree works (inside `TreeUtilities.java`) for this practical. These facilities are just provided to make it easier for you to create multiple sample trees to try things out on, and see the contents of the trees.  
 请注意，在本次实践中你 _不需要_ 理解随机树生成或树可视化显示（`TreeUtilities.java` 内部）是如何实现的。这些功能只是为了便于你快速创建多个样例树并查看树内容。
 
-## Exercise 2 - Traversals<br>练习 2：遍历
+## Exercise 2 - Traversals <br>练习 2：遍历
 
 Implement the method `preOrderTraversal()` in the `TreeNavigator` class. After that, add a line of code to the `main` method in the main class, `TreePlay`, to look at the results of your traversals, so that you now have  
 在 `TreeNavigator` 类中实现 `preOrderTraversal()`。随后在主类 `TreePlay` 的 `main` 方法中添加代码，以查看遍历结果，即：
@@ -48,16 +48,16 @@ TreeNavigator.preOrderTraversal(t);
 TreeUtilities.showTree(t);
 ```
 
-Run the code - but _STOP_ before clicking on the continue button. Before the program gets to printing out the pre-order traversal of the tree, predict the results: write down on a piece of paper what the tree looks like, and write down what you THINK is the pre-order traversal of the tree. Then click on the continue button. Were you right? If not, try again.  
-运行代码，但在点击继续按钮前先 _停下_。在程序打印先序遍历结果前，请先预测：把树形结构画在纸上，并写下你“认为”的先序遍历序列。然后再点击继续。你猜对了吗？如果没有，再试一次。
+Run the code - but *STOP* before clicking on the continue button. Before the program gets to printing out the pre-order traversal of the tree, predict the results: write down on a piece of paper what the tree looks like, and write down what you THINK is the pre-order traversal of the tree. Then click on the continue button. Were you right? If not, try again.  
+运行代码，但在点击继续按钮前先*停下*。在程序打印先序遍历结果前，请先预测：把树形结构画在纸上，并写下你“认为”的先序遍历序列。然后再点击继续。你猜对了吗？如果没有，再试一次。
 
-Now implement the `postOrderTraversal()` and `inOrderTraversal()` methods, and test them by adding code to the `TreePlay` class, as you did for the `preOrderTraversal()` method. Note that it will be easier to check your results if you call your TreeNavigator methods _before_ calling `TreeUtilities.showTree()`.  
-接着实现 `postOrderTraversal()` 和 `inOrderTraversal()`，并像测试 `preOrderTraversal()` 一样，在 `TreePlay` 中添加测试代码。注意：若先调用 TreeNavigator 方法、再调用 `TreeUtilities.showTree()`，结果会更容易核对。
+Now implement the `postOrderTraversal()` and `inOrderTraversal()` methods, and test them by adding code to the `TreePlay` class, as you did for the `preOrderTraversal()` method. Note that it will be easier to check your results if you call your TreeNavigator methods *before* calling `TreeUtilities.showTree()`.  
+接着实现 `postOrderTraversal()` 和 `inOrderTraversal()` ，并像测试 `preOrderTraversal()` 一样，在 `TreePlay` 中添加测试代码。请注意，如果在调用 `TreeUtilities.showTree()` *之前*先调用你的 TreeNavigator 方法，那么检查结果将会更加容易。
 
-## Exercise 3 - Counting the Leaves<br>练习 3：统计叶子节点
+## Exercise 3 - Counting the Leaves <br>练习 3：统计叶子节点
 
-Now implement the `leafCount()` method in the TreeNavigator class so that you count how many _leaves_ there are in a binary tree:  
-现在在 TreeNavigator 类中实现 `leafCount()`，用于统计二叉树中的_叶子节点_数量：
+Now implement the `leafCount()` method in the TreeNavigator class so that you count how many *leaves* there are in a binary tree:  
+现在在 TreeNavigator 类中实现 `leafCount()`，用于统计二叉树中的*叶子节点*数量：
 
 ```java
 public int leafCount(BinaryTree t)…
@@ -82,9 +82,9 @@ TreeUtilities.showTree(t);
 so you can check the result of the `leafCount` method while the tree is displayed on the screen.  
 这样你就可以在树可视化显示时同步核对 `leafCount` 的结果。
 
-## Exercise 4 - The Depth of a Binary Tree<br>练习 4：二叉树深度
+## Exercise 4 - The Depth of a Binary Tree <br>练习 4：二叉树深度
 
-The _depth_ of a binary tree is the number of <u>edges</u> that you have to traverse to get from the root of the tree to its furthest leaf.  
+该 *depth* of a binary tree is the number of <u>edges</u> that you have to traverse to get from the root of the tree to its furthest leaf.  
 二叉树的*深度*是指：从树根到最远叶子节点所需经过的<u>边</u>数。
 
 > Usually, height is the same as depth.  
@@ -109,22 +109,22 @@ TreeUtilities.showTree(t);
 so you can check the result of the `depth()` method while the tree is displayed on the screen. As before, try it on a few more trees, to test that it seems to work ok.  
 这样你就能在树显示时核对 `depth()` 的结果。和之前一样，再多测几棵树，确认实现表现正常。
 
-## Further Exercises (optional)<br>进阶练习（可选）
+## Further Exercises (optional) <br>进阶练习（可选）
 
 These exercises are provided so that if at some point you would like to practise further with binary tree concepts, you have some exercises to try. They would be very good for revision purposes!  
-这些练习用于你后续继续巩固二叉树概念，非常适合复习使用。
+这些练习用于你后续继续巩固二叉树概念，非常适合复习使用！
 
-## Exercise 5 - More Practice on Recursive Methods<br>练习 5：递归方法进阶
+## Exercise 5 - More Practice on Recursive Methods <br>练习 5：递归方法进阶
 
-Write a recursive method `strictlyBinary()` (to go in the `TreeNavigator` class)  
-编写递归方法 `strictlyBinary()`（放在 `TreeNavigator` 类中）：
+Write a recursive method `strictlyBinary()` (to go in the TreeNavigator class)  
+编写递归方法 `strictlyBinary()`（放在 TreeNavigator 类中）：
 
 ```java
 public static boolean strictlyBinary(BinaryTree t)
 ```
 
 which returns true if and only if the tree is `strictly binary`. A tree is strictly binary if it is not empty, and every node that is not a leaf has precisely two subtrees.  
-当且仅当该树是 `strictly binary`（严格二叉树）时返回 `true`。严格二叉树要求：树非空，且每个非叶节点都恰好有两个子树。
+当且仅当该树是 `strictly binary`（严格二叉树）时返回 true。严格二叉树要求：树非空，且每个非叶节点都恰好有两个子树。
 
 ## Reference Answer
 
@@ -246,13 +246,13 @@ which returns true if and only if the tree is `strictly binary`. A tree is stric
 > }
 > ```
 
-# Practical: Cross-referencing (Binary search tree)<br>实践：交叉引用（基于二叉搜索树）
+# Practical: Cross-referencing (Binary search tree) <br>实践：交叉引用（基于二叉搜索树）
 
 You are going to complete the implementation (in Java) of a program that will generate a **cross-reference** listing of a text provided in a file.  
 你将完成一个 Java 程序：对给定文件中的文本生成**交叉引用**列表。
 
 For example, look at this file  
-例如，考虑这个文件  
+例如，请看这个文件  
 →
 
 > Macavity's a Mystery Cat: he's called the Hidden Paw
@@ -269,7 +269,7 @@ The cross-reference you will produce will display a list, in alphabetic order, o
 你要生成的交叉引用将按字母顺序列出文本中的每个单词，以及该单词出现的行号。
 
 The line numbers should appear in ascending order, and, if a word appears on a line of the text more than once, then the line number should appear only **once** for that word in the cross-reference list.  
-行号应按升序显示；若同一单词在同一行出现多次，该行号在交叉引用中也只应出现 **一次**。
+行号应按升序显示；若同一单词在同一行出现多次，该行号在交叉引用中也只应出现**一次**。
 
 For example, the cross reference of the above file is as follows  
 例如，上述文件的交叉引用如下  
@@ -282,11 +282,11 @@ For example, the cross reference of the above file is as follows
     </tr>
 </table>
 
-To produce the cross-reference listing, you will use a _binary search tree_ to store the words in the file, and each word in the tree should be stored along with a list of the numbers of the lines on which it appears. Note that you will not need to do any _explicit sorting_ in this program to get values in the desired order.  
-为生成交叉引用列表，你将使用*二叉搜索树*存储文件中的单词，并为每个单词维护其出现行号列表。注意：为了得到所需顺序，你不需要做任何_显式排序_。
+To produce the cross-reference listing, you will use a *binary search tree* to store the words in the file, and each word in the tree should be stored along with a list of the numbers of the lines on which it appears. Note that you will not need to do any *explicit sorting* in this program to get values in the desired order.  
+为生成交叉引用列表，你将使用*二叉搜索树*存储文件中的单词，并为每个单词维护其出现行号列表。注意：为了得到所需顺序，你不需要做任何*显式排序*。
 
-For a longer example, see the _Appendix_ of this document.  
-更长示例见文末*附录*。
+For a longer example, see the *Appendix* of this document.  
+更长的示例见文末*附录*。
 
 ## Exercise 1
 
@@ -296,11 +296,11 @@ Set up a project from the sources supplied on the student website, in the usual 
 Take a look at the two files you are provided with:  
 查看提供给你的文件：
 
-- `Xrefs.java` _-_ the main program (**DO NOT ALTER**)<br>`Xrefs.java`：主程序（**不要修改**）
-- `WordTree.java` - where the binary search tree is **(DO NOT ALTER)**<br>`WordTree.java`：二叉搜索树数据结构定义（**不要修改**）
-- `TreeUtils.Java` - this contains various routines for processing trees, and it is the only file that you should alter<br>`TreeUtils.java`：包含各种树处理例程，也是唯一需要你修改的文件
+- `Xrefs.java` - the main program (**DO NOT ALTER**)<br>`Xrefs.java` - 主程序（**不要修改**）
+- `WordTree.java` - where the binary search tree is **(DO NOT ALTER)**<br>`WordTree.java` - 二叉搜索树数据结构定义（**不要修改**）
+- `TreeUtils.Java` - this contains various routines for processing trees, and it is the only file that you should alter<br>`TreeUtils.java` - 包含各种树处理例程，也是唯一需要你修改的文件
 
-The data structure for the _binary search tree_ to store the words is provided for you, in the file `WordTree.java`. In the exercises below, you will modify the file `TreeUtils.java` so as to implement the following methods:  
+The data structure for the *binary search tree* to store the words is provided for you, in the file `WordTree.java`. In the exercises below, you will modify the file `TreeUtils.java` so as to implement the following methods:  
 用于存储单词的*二叉搜索树*数据结构已在 `WordTree.java` 提供。接下来你需要修改 `TreeUtils.java`，实现以下方法：
 
 - `recordWord()` - adding a word to a tree<br>`recordWord()` - 向树中添加单词
@@ -316,7 +316,7 @@ Start editing the file `TreeUtils.java` by putting your name as the author.
 Note that when you add a word to the tree, if the word is new, then a new node should be added to the tree, but if the word has been seen before, then the line-number of the new occurrence of the word should be added to the list of line numbers accompanying the word in the tree.  
 注意：向树中添加单词时，若该词是新词则应新建节点；若该词已存在，则应将此次出现的行号加入该词对应的行号列表。
 
-## Exercise 2<br>练习 2
+## Exercise 2
 
 Implement the method  
 实现下列方法：
@@ -334,21 +334,21 @@ This method should insert the word `word` into the tree `tree`, and should retur
 **Note**: you can compare strings by using suitable methods from the `String` class, in particular look up the methods `equalsIgnoreCase()` and `compareToIgnoreCase()`. For example if `word1` and `word2` are the two strings to be compared, then the expression `word1.compareToIgnoreCase(word2)` will return 0 if the two words are the same (ignoring upper/lower case), will return a number less than 0 if `word1` occurs before `word2` in the dictionary, and will return a number greater than 0 if `word1` occurs after `word2` in the dictionary.  
 **注意：** 比较字符串可使用 `String` 类方法，特别是 `equalsIgnoreCase()` 与 `compareToIgnoreCase()`。例如比较 `word1` 与 `word2` 时，`word1.compareToIgnoreCase(word2)`：若两词相同（忽略大小写）返回 0；若 `word1` 在词典序中位于 `word2` 之前则返回小于 0；反之返回大于 0。
 
-_Suggestion_: don’t worry about the line numbers at first, but produce a first version of your program that just produces an alphabetically ordered list of all the (different) words that appeared in the input file.  
-_建议_：开始阶段先不处理行号，先做出一个版本，只输出输入文件中所有不同单词的字母序列表。
+*Suggestion*: don’t worry about the line numbers at first, but produce a first version of your program that just produces an alphabetically ordered list of all the (different) words that appeared in the input file.  
+*建议*：开始阶段先不处理行号，先做出一个版本，只输出输入文件中所有不同单词的字母序列表。
 
-Also, don’t forget that, if a word appears on a line of the text more than once, then the line number should appear only **once.**  
+Also, don’t forget that, if a word appears on a line of the text more than once, then the line number should appear only **once**.  
 同时别忘了：若同一单词在同一行出现多次，该行号也只应记录 **一次**。
 
-## Exercise 3<br>练习 3
+## Exercise 3
 
 Implement the method `display()`. If you traverse the binary search tree in the right order then the words will come out in alphabetical order. You will **not** need to sort the list of words if you have built it in the right way.  
-实现 `display()` 方法。若你按正确顺序遍历二叉搜索树，输出单词将天然按字母序排列。只要树构建正确，你**不需要**额外排序。
+实现 `display()` 方法。若你按正确顺序遍历二叉搜索树，输出单词将天然按字母序排列。只要树构建正确，你**不**需要额外排序。
 
 You may assume that the list of line numbers for any one word will fit on one line of the display.  
 你可以假设：任意单词对应的行号列表都能在显示中放在同一行。
 
-## Exercise 4<br>练习 4
+## Exercise 4
 
 Implement the method `numberOfEntries()`.  
 实现 `numberOfEntries()` 方法。
@@ -442,7 +442,7 @@ Implement the method `numberOfEntries()`.
 > }
 > ```
 
-## Appendix
+## Appendix <br>附录
 
 If you want to entertain yourself look at:  
 如果你想放松一下，可以看看：
@@ -539,8 +539,9 @@ number of words: 144
 number of different words: 35
 ```
 
+---
 
-# Reference Answer to the Thinking Question in lecture<br>lecture思考题参考答案
+# Reference Answer to the Thinking Question in lecture <br>讲座中思考题的参考答案
 
 ## 常见二叉树类型
 
