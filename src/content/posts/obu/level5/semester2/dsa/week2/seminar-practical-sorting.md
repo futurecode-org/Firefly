@@ -17,12 +17,12 @@ comment: true
 # sourceLink: 
 ---
 
-# Practical: Sorting<br>实践：排序
+# Practical: Sorting <br>实践：排序
 
 ## Exercise 1 - Setup
 
-Extract the code provided, organise your folders, and get a project set up as usual. You should now see the following files in the project:  
-提取给定代码，整理好文件夹，并像平常一样完成项目初始化。此时你应在项目中看到以下文件：
+Extract the code provided, organise your folders, 和 get a project set up as usual. You should now see the following files in the project:  
+解压已提供的代码，整理好文件夹，并像平常一样完成项目初始化。此时你应在项目中看到以下文件：
 - The class _Sequence_ manages a sequence of integers of capacity _max_. It also contains methods _insertionSort_ and _quickSort_.<br>类 _Sequence_ 管理一个容量为 _max_ 的整数序列，并包含 _insertionSort_ 和 _quickSort_ 方法。
 - The class _SortExplore_ is the main program: it initialises a sequence to random values and then sorts the sequence.<br>类 _SortExplore_ 是主程序：它先将序列初始化为随机值，再对序列进行排序。  
 Within _SortExplore_, try changing the value of _numElements_ to different values (less than about 200,000 is best), watching how long it takes for each sort.  
