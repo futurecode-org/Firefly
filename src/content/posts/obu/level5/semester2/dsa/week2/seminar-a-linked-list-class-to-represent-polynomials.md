@@ -17,9 +17,9 @@ comment: true
 # sourceLink: 
 ---
 
-# A Linked List Class to Represent Polynomials<br>用链表类表示多项式
+# A Linked List Class to Represent Polynomials <br>用链表类表示多项式
 
-## Introduction<br>介绍
+## Introduction <br>介绍
 
 In this exercise you will create a simple application that manipulates polynomial expressions. You will create a linked list class to represent the expressions.  
 
@@ -32,7 +32,7 @@ In this exercise you will create a simple application that manipulates polynomia
 > 
 > Power 指数
 
-## Recap on polynomials<br>多项式回顾
+## Recap on polynomials <br>多项式回顾
 
 You probably learnt about polynomial expressions at school. However, in case you have forgotten all that, a polynomial expression of one variable is an expression in which multiples of powers of that variable are added together. So for example the following are all polynomial expressions of one variable:  
 你可能在学校学过多项式表达式。不过如果你已经忘了，单变量多项式就是把该变量各次幂的若干倍数相加得到的表达式。例如下面这些都属于单变量多项式：
@@ -66,7 +66,7 @@ $$
 \end{aligned}
 $$
 
-## The Polynomial Calculator<br>多项式计算器
+## The Polynomial Calculator <br>多项式计算器
 
 Download the source code on the module website, then compile and run it. You should see something resembling Figure 1 overleaf.  
 从课程模块网站下载源代码，然后编译并运行。你应该会看到与下图（图 1）类似的界面。
@@ -90,7 +90,7 @@ The key ‘C’ clears the entry area and the key ‘Del’ deletes the last cha
 > Figure 2 The Polynomial Calculator  
 > 图 2 多项式计算器
 
-### What you have to do<br>你需要完成的内容
+### What you have to do <br>你需要完成的内容
 
 The main class of the application, which is called _PolyCalc_, contains the following two methods  
 应用的主类名为 _PolyCalc_，其中包含以下两个方法：
@@ -115,9 +115,7 @@ private static void createAndShowGui() {
 As you can see, two objects of the class _ALPoly_ are created and passed to the GUI class. The two _ALPoly_ objects implement an interface _Polynomial_ which is set out in appendix A. The Polynomial interface defines methods to be implemented by objects that represent polynomial equations. The _ALPoly_ class implements them using an ArrayList. However there are a number of _problems_ with it:  
 如你所见，代码创建了两个 _ALPoly_ 对象并传给 GUI 类。这两个 _ALPoly_ 对象实现了附录 A 中定义的 _Polynomial_ 接口。_Polynomial_ 接口规定了表示多项式对象应实现的方法。_ALPoly_ 用 ArrayList 实现这些方法，但它存在一些问题：
 - The methods _addPoly_ and _multiplyPoly_ don’t do anything. That’s why the _M+_ and _M\*_ keys don’t work.<br>_addPoly_ 和 _multiplyPoly_ 方法目前没有实际功能，所以 _M+_ 与 _M\*_ 按钮无法工作。
-- An ArrayList isn’t a very sensible choice here, for reasons set out in the lecture.<br>根据课堂中讲过的原因，这里使用 ArrayList 并不是很合适。
-To fix this you will create an implementation a class that implements the _Polynomial_ interface and stores data in a linked list of your own creation. You should modify the main method so as to use this new class. You should not make any other modifications to the code. The Java API already contains a _LinkedList_ class, but you should **_not_** use it.  
-为了解决这些问题，你需要自己实现一个类：它实现 _Polynomial_ 接口，并使用你自己编写的链表来存储数据。你应修改 main 方法以使用这个新类，除此之外不应修改其他代码。Java API 虽然有现成的 _LinkedList_ 类，但你 **不应** 使用它。
+- An ArrayList isn’t a very sensible choice here, for reasons set out in the lecture. To fix this you will create an implementation a class that implements the _Polynomial_ interface and stores data in a linked list of your own creation. You should modify the main method so as to use this new class. You should not make any other modifications to the code. The Java API already contains a _LinkedList_ class, but you should **_not_** use it.<br>根据课堂中讲过的原因，这里使用 ArrayList 并不是很合适。为了解决这些问题，你需要自己实现一个类：它实现 _Polynomial_ 接口，并使用你自己编写的链表来存储数据。你应修改 main 方法以使用这个新类，除此之外不应修改其他代码。Java API 虽然有现成的 _LinkedList_ 类，但你 **不应** 使用它。
 
 #### Exercise 1
 
@@ -155,7 +153,7 @@ Implement the addPoly method. **Hint:** you have already implemented the _addTer
 Implement the _multiplyByPoly_ method. **Hint:** make a copy of your internal linked list. Then call the _clear_ method. Then use _addTerm_ repeatedly.  
 实现 _multiplyByPoly_ 方法。**提示：** 先复制一份内部链表，再调用 _clear_，然后重复调用 _addTerm_ 构建结果。
 
-## Appendix: The Polynomial interface<br>附录：Polynomial 接口
+## Appendix: The Polynomial interface <br>附录：Polynomial 接口
 
 ```java
 package polycalc;
