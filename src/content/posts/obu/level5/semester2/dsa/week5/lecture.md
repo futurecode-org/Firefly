@@ -60,7 +60,7 @@ comment: true
 
 ## Basic Terminology for Binary Trees <br>二叉树基础术语
 
-> Terminology
+> Terminology 术语
 
 ![](img/Pasted_image_20260407130123.png)
 
@@ -556,7 +556,7 @@ public static boolean contains(SearchTree tree, int val) {
 
 ## Exercise
 
-- Sketch out the tree that would be produced by inserting the values 4, 5, 10, 25, 39 _in that order_, using the insert method shown earlier.<br>使用前面给出的 `insert` 方法，按顺序插入 4、5、10、25、39，画出最终生成的树。
+- Sketch out the tree that would be produced by inserting the values 4, 5, 10, 25, 39 _in that order_, using the insert method shown earlier.<br>使用前面给出的 insert 方法，按顺序插入 4、5、10、25、39，画出最终生成的树。
 - Using the search method shown earlier, how many method calls do you need to make in order to find out whether 39 is in the resulting tree?<br>使用前面的查找方法，要判断结果树中是否存在 39，需要调用多少次方法？
 - How many method calls do you need to make to find out whether 100 is in the tree?<br>若判断 100 是否在树中，需要调用多少次方法？
 
@@ -581,8 +581,8 @@ Said to have _degenerated_ into a linked list.
 
 - Make a class *BinarySearchTree contain* a class *Node*.<br>让 *BinarySearchTree* 类内部“包含” *Node* 类。
 - *BinarySearchTree* can then have as fields:<br>*BinarySearchTree* 可包含如下字段： 
-    - *root* - a Node<br>*root*：一个节点引用
-    - *numEntries* - an integer<br>*numEntries*：整数计数
+    - *root* - a Node<br>*root* - 一个节点引用
+    - *numEntries* - an integer<br>*numEntries* - 整数计数
 
 ## A Search Tree class (for integers) <br>一个搜索树类（用于整数）
 
