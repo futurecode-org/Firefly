@@ -78,10 +78,10 @@ Clicking any of the keys ‘0’-‘9’, ‘x’ , ‘^’ ‘+’ or ‘-’ r
 点击 ‘0’ 到 ‘9’、‘x’、‘^’、‘+’ 或 ‘-’ 键，输入区会出现对应字符。你可以用这些键在输入区书写多项式表达式，其中 ‘^’ 表示幂运算。
 
 If you click on the ‘=’ key the expression in the entry area will be checked to see if it is a syntactically correct polynomial. If it is not then an error message is displayed. If the expression is correct then it _should_ be simplified, but that does not happen yet, so you are going to have to write the code that does it.  
-点击 ‘=’ 键后，程序会检查输入区表达式是否为语法正确的多项式。若不正确，会显示错误信息。若正确，程序本应将其化简，但目前还没有实现，所以这部分代码需要你来完成。
+点击 ‘=’ 键后，程序会检查输入区表达式是否为语法正确的多项式。若不正确，会显示错误信息。若正确，程序*本应*将其化简，但目前还没有实现，所以这部分代码需要你来完成。
 
 Clicking on the ‘MS’ key moves the expression in the entry area to the memory area. Clicking on ‘M+’ _should_ add the expressions in the two areas and put the result in the memory area. Clicking on ‘M*’ _should_ multiply them and put the result in the memory area. However neither of those two keys work yet. You are going to fix that. ‘MC’ clears the memory area.  
-点击 ‘MS’ 键会把输入区表达式存入存储区。点击 ‘M+’ 本应把两个区域中的表达式相加并将结果放入存储区；点击 ‘M*’ 本应执行乘法并把结果放入存储区。不过这两个键目前都还不能正常工作，你需要修复它们。‘MC’ 用于清空存储区。
+点击 ‘MS’ 键会把输入区表达式存入存储区。点击 ‘M+’ *本应*把两个区域中的表达式相加并将结果放入存储区；点击 ‘M*’ *本应*执行乘法并把结果放入存储区。不过这两个键目前都还不能正常工作，你需要修复它们。‘MC’ 用于清空存储区。
 
 The key ‘C’ clears the entry area and the key ‘Del’ deletes the last character in the entry area.  
 ‘C’ 键清空输入区，‘Del’ 键删除输入区最后一个字符。
@@ -115,7 +115,7 @@ private static void createAndShowGui() {
 As you can see, two objects of the class _ALPoly_ are created and passed to the GUI class. The two _ALPoly_ objects implement an interface _Polynomial_ which is set out in appendix A. The Polynomial interface defines methods to be implemented by objects that represent polynomial equations. The _ALPoly_ class implements them using an ArrayList. However there are a number of _problems_ with it:  
 如你所见，代码创建了两个 _ALPoly_ 对象并传给 GUI 类。这两个 _ALPoly_ 对象实现了附录 A 中定义的 _Polynomial_ 接口。_Polynomial_ 接口规定了表示多项式对象应实现的方法。_ALPoly_ 用 ArrayList 实现这些方法，但它存在一些问题：
 - The methods _addPoly_ and _multiplyPoly_ don’t do anything. That’s why the _M+_ and _M\*_ keys don’t work.<br>_addPoly_ 和 _multiplyPoly_ 方法目前没有实际功能，所以 _M+_ 与 _M\*_ 按钮无法工作。
-- An ArrayList isn’t a very sensible choice here, for reasons set out in the lecture. To fix this you will create an implementation a class that implements the _Polynomial_ interface and stores data in a linked list of your own creation. You should modify the main method so as to use this new class. You should not make any other modifications to the code. The Java API already contains a _LinkedList_ class, but you should **_not_** use it.<br>根据课堂中讲过的原因，这里使用 ArrayList 并不是很合适。为了解决这些问题，你需要自己实现一个类：它实现 _Polynomial_ 接口，并使用你自己编写的链表来存储数据。你应修改 main 方法以使用这个新类，除此之外不应修改其他代码。Java API 虽然有现成的 _LinkedList_ 类，但你 **不应** 使用它。
+- An ArrayList isn’t a very sensible choice here, for reasons set out in the lecture. To fix this you will create an implementation a class that implements the _Polynomial_ interface and stores data in a linked list of your own creation. You should modify the main method so as to use this new class. You should not make any other modifications to the code. The Java API already contains a _LinkedList_ class, but you should **_not_** use it.<br>根据课堂中讲过的原因，这里使用 ArrayList 并不是很合适。为了解决这些问题，你需要自己实现一个类：它实现 _Polynomial_ 接口，并使用你自己编写的链表来存储数据。你应修改 main 方法以使用这个新类，除此之外不应修改其他代码。Java API 虽然有现成的 _LinkedList_ 类，但你***不应***使用它。
 
 #### Exercise 1
 
