@@ -17,42 +17,55 @@ comment: true
 # sourceLink: 
 ---
 
-# Practical: Sorting
+# Practical: Sorting <br>实践：排序
 
 ## Exercise 1 - Setup
 
-Extract the code provided, organise your folders, and get a project set up as usual. You should now see the following files in the project:
-- The class _Sequence_ manages a sequence of integers of capacity _max_. It also contains methods _insertionSort_ and _quickSort_.
-- The class _SortExplore_ is the main program: it initialises a sequence to random values and then sorts the sequence.
-Within _SortExplore_, try changing the value of _numElements_ to different values (less than about 200,000 is best), watching how long it takes for each sort.
+Extract the code provided, organise your folders, and get a project set up as usual. You should now see the following files in the project:  
+解压已提供的代码，整理好文件夹，并像平常一样完成项目初始化。此时你应在项目中看到以下文件：
+- The class *Sequence* manages a sequence of integers of capacity *max*. It also contains methods *insertionSort* 和 *quickSort*.<br>类 *Sequence* 管理一个容量为 *max* 的整数序列，并包含 *insertionSort* 和 *quickSort* 方法。
+- The class *SortExplore* is the main program: it initialises a sequence to random values and then sorts the sequence.<br>类 *SortExplore* 是主程序：它先将序列初始化为随机值，再对序列进行排序。  
+Within *SortExplore*, try changing the value of *numElements* to different values (less than about 200,000 is best), watching how long it takes for each sort.  
+在 *SortExplore* 中，尝试把 *numElements* 改成不同数值（建议小于约 200,000），观察每种排序所花费的时间。
 
 ## Exercise 2
 
-Count the number of steps that _insertionSort_ takes, in the following way:
+Count the number of steps that *insertionSort* takes, in the following way:  
+按如下方式统计 *insertionSort* 执行的步数：
 
-Add code to the _insertionSort_ method to increase the value of the variable _stepCount_ each time an element of the sequence is _accessed_.
+Add code to the *insertionSort* method to increase the value of the variable *stepCount* each time an element of the sequence is *accessed*.  
+在 *insertionSort* 方法中加代码：每次“访问”序列中的一个元素时，都让变量 *stepCount* 增加。
 
-(To be clear, accessing an element of the sequence could be when an element of the array is inspected or copied, or when a value is written into a position in the array.)
+(To be clear, accessing an element of the sequence could be when an element of the array is inspected or copied, or when a value is written into a position in the array.)  
+（说明：所谓访问序列元素，可以是检查数组元素、复制数组元素，或将某个值写入数组中的某个位置。）
 
-Also add a comment at each place you increase the value of the variable _stepCount_, to make it clear which access of the sequence it is that you are counting.
+Also add a comment at each place you increase the value of the variable *stepCount*, to make it clear which access of the sequence it is that you are counting.  
+另外，在每个增加 *stepCount* 的位置加注释，明确说明你统计的是哪一次序列访问。
 
-Run the main program and note how many accesses are done by the insertion sort.
+Run the main program and note how many accesses are done by the insertion sort.  
+运行主程序，并记录插入排序进行了多少次访问。
 
 ## Exercise 3
 
-Similarly, also add statement(s) to the _qSort_ method to count the number of steps that it takes:
+Similarly, also add statement(s) to the *qSort* method to count the number of steps that it takes:  
+同样地，在 *qSort* 方法中加入语句来统计其步数：
 
-Add code to the _qSort_ method to increase the value of the variable _stepCount_ each time an element of the sequence is accessed.
+Add code to the *qSort* method to increase the value of the variable *stepCount* each time an element of the sequence is accessed.  
+在 *qSort* 方法中加代码：每次访问序列元素时，让变量 *stepCount* 增加。
 
-Also add a comment at each place you increase the value of the variable _stepCount_, to make it clear which access of the sequence it is that you are counting. 
+Also add a comment at each place you increase the value of the variable *stepCount*, to make it clear which access of the sequence it is that you are counting.  
+同样在每个增加 *stepCount* 的位置添加注释，说明该计数对应的是哪一次访问。
 
-Run the main program and note how many accesses are done by _qSort_.
+Run the main program and note how many accesses are done by *qSort*.  
+运行主程序，并记录 *qSort* 的访问次数。
 
 ## Exercise 4
 
-Add statements to the main program so that your sequence is sorted _twice_ by each method – that is, for each sorting algorithm, the already-sorted sequence is sorted again, and the number of accesses is counted afresh.
+Add statements to the main program so that your sequence is sorted *twice* by each method – that is, for each sorting algorithm, the already-sorted sequence is sorted again, and the number of accesses is counted afresh.  
+在主程序中添加语句，使每种排序方法都对同一序列执行*两次*排序。也就是对每种算法，把已经排好序的序列再排一次，并重新统计访问次数。
 
-Append the content of the output window to your source text for _SortExplore_ in a comment `/* … */` and include some brief comments on the differences/similarities between the two sorting algorithms: Which is quicker (in terms of the number of accesses)? What difference does it make the second time round? Why?
+Append the content of the output window to your source text for *SortExplore* in a comment `/* … */` and include some brief comments on the differences/similarities between the two sorting algorithms: Which is quicker (in terms of the number of accesses)? What difference does it make the second time round? Why?  
+将输出窗口内容以 `/* … */` 注释形式附加到 *SortExplore* 的源码中，并简要分析两种排序算法的异同：哪个更快（以访问次数衡量）？第二次排序有什么变化？为什么？
 
 > [!CHECK] Reference Answer
 
