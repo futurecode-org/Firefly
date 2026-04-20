@@ -307,7 +307,7 @@ def cancel_confirm():
             let taskElement = document.getElementById("task_" + taskId);
             taskElement.classList.toggle('crossed-out');
         }
-        // Try "loop.index" and "loop.index0" here, observe the diffrences
+        // Try "loop.index" and "loop.index0" here, observe the differences
         {% for todo in todos %}
             console.log("Task {{ loop.index0 }}: {{ todo }}");
         {% endfor %}
