@@ -40,7 +40,7 @@ Your task is to develop and test a full-stack web-based Plant and Garden Care Tr
 
 The primary goal is to simplify plant care management and foster a gardening community while ensuring an intuitive experience for all users. The following is the basic functionality to implement:
 
-### *Commun pages:*
+### *Common pages:*
 
 - **404/Error Pages:** Contains "Page not found" message and a navigation back to homepage.
 
