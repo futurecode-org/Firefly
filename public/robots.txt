@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://firefly.anka2.top/sitemap-index.xml
