@@ -50,6 +50,15 @@ export const friendsConfig: FriendLink[] = [
 		weight: 8,
 		enabled: true,
 	},
+	{
+		title: "Bertrand的网页",
+		imgurl:"https://bertyuan.com/assets/avatar/ape_avatar.jpg",
+		desc: "自由软件狂热支持者。——发自他的MacBook",
+		siteurl: "https://bertyuan.com",
+		tags: ["Homepage"],
+		weight: 7,
+		enabled: true,
+	},
 ];
 
 // 获取启用的友链并进行排序
