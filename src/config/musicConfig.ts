@@ -39,6 +39,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		fallbackApis: [
 			"https://api.injahow.cn/meting/?server=:server&type=:type&id=:id",
 			"https://api.moeyao.cn/meting/?server=:server&type=:type&id=:id",
+			"https://meting.mysqil.com/api?server=:server&type=:type&id=:id",
 		],
 	},
 
