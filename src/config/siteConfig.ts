@@ -179,7 +179,7 @@ export const siteConfig: SiteConfig = {
 		// Umami 统计配置
 		umamiAnalytics: {
 			// Umami Website ID
-			websiteId: "3d82e8e5-e4c5-497d-8d02-3083c82d0930",
+			websiteId: "0e40ffab-30f6-4547-9f26-b4a47754c025",
 			// Umami JS地址，支持使用自建
 			scriptUrl: "https://umai.anka1.top/script.js",
 			// Umami 会话回放脚本地址，支持使用自建
@@ -215,7 +215,7 @@ export const siteConfig: SiteConfig = {
 			//  Hash路由模式, 项目使用History API路由, 所以不必开启默认false
 			hashMode: false,
 			// 是否开启网站录屏功能
-			screenRecord: true,
+			screenRecord: false,
 		},
 	},
 
