@@ -69,6 +69,21 @@ export const sponsorConfig: SponsorConfig = {
 
 	// 赞助者列表（可选）
 	sponsors: [
+		{
+			name: "👻",
+			avatar:
+				"https://q.qlogo.cn/headimg_dl?dst_uin=2410097431&spec=640",
+			amount: "¥2",
+			date: "2026-06-01",
+		},
+		{
+			name: "🦷仔",
+			avatar:
+				"https://q.qlogo.cn/headimg_dl?dst_uin=1007786400&spec=640",
+			amount: "¥1",
+			date: "2026-06-01",
+		},
+		/*
 		// 示例：已实名赞助者
 		{
 			name: "夏叶",
@@ -85,5 +100,6 @@ export const sponsorConfig: SponsorConfig = {
 			amount: "¥20",
 			date: "2025-10-01",
 		},
+		*/
 	],
 };
