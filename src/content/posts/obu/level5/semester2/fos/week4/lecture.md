@@ -331,14 +331,14 @@ Named after its inventors **Rivest**, **Shamir**, and **Adleman**, RSA is based 
 ---
 
 **Encryption:**  
-Given a plaintext message $\textcolor{blue}{𝑀}$, the ciphertext $\textcolor{blue}{𝐶}$ is computed as:
+Given a plaintext message $\textcolor{blue}{M}$, the ciphertext $\textcolor{blue}{C}$ is computed as:
 $$
-\textcolor{red}{𝐶=𝑀e \bmod n}
+\textcolor{red}{C = M^e \bmod n}
 $$
 **Decryption:**  
-To retrieve the plaintext $\textcolor{blue}{𝑀}$ from the ciphertext $\textcolor{blue}{𝐶}$, use the private key $\textcolor{blue}{d}$:
+To retrieve the plaintext $\textcolor{blue}{M}$ from the ciphertext $\textcolor{blue}{C}$, use the private key $\textcolor{blue}{d}$:
 $$
-\textcolor{green}{𝑀=𝐶d \bmod n}
+\textcolor{green}{M = C^d \bmod n}
 $$
 
 ---
